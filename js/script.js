@@ -85,14 +85,14 @@
     var header = document.querySelector('.site-header');
     if (header) {
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 10) {
+            if (window.scrollY > 20) {
                 header.classList.add('is-scrolled');
             } else {
                 header.classList.remove('is-scrolled');
             }
         }, { passive: true });
 
-        if (window.scrollY > 10) {
+        if (window.scrollY > 20) {
             header.classList.add('is-scrolled');
         }
     }

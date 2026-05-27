@@ -27,48 +27,38 @@
         </a>
         <nav class="section--hero__nav-menu" aria-label="Primary">
             <ul class="section--hero__nav-list">
-                <li><a href="./index.html#how-it-works">How it works</a></li>
-                <li><a href="./index.html#integrations">Integrations</a></li>
-                <li><a href="./pricing.html">Pricing</a></li>
-                <li>
-                    <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu"
-                        aria-expanded="false">
-                        Solutions
-                        <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7"
-                            aria-hidden="true">
-                            <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </li>
-                <li>
-                    <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu"
-                        aria-expanded="false">
+                <li data-text="How it works"><a href="./index.html#how-it-works">How it works</a></li>
+                <li data-text="Integrations"><a href="./integrations.html">Integrations</a></li>
+                <li data-text="Pricing"><a href="./pricing.html">Pricing</a></li>
+                <li data-text="Case Studies"><a href="./casestudy.html">Case Studies</a></li>
+                <li class="nav-dropdown-container" data-text="Resource">
+                    <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu" aria-expanded="false">
                         Resource
-                        <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7"
-                            aria-hidden="true">
-                            <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                        <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                            <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="./about.html">About Us</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./documentation.html">Documentation</a>
+                        <a href="./contact.html">Contact</a>
+                    </div>
                 </li>
             </ul>
         </nav>
         <div class="section--hero__actions">
-            <a class="btn btn--primary" href="#book-demo">Book a demo</a>
+            <a class="btn btn--primary" href="https://corvexa.ai/get-a-demo/">Book a demo</a>
             <a class="btn btn--secondary" href="#login">
                 Log in
                 <svg class="btn__icon" viewBox="0 0 14 14" aria-hidden="true">
-                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </a>
         </div>
-        <button type="button" class="hamburger" data-mobile-nav-trigger aria-label="Open menu" aria-expanded="false"
-            aria-controls="mobile-nav">
+        <button type="button" class="hamburger" data-mobile-nav-trigger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" />
+                <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
         </button>
     </header>
@@ -669,47 +659,24 @@
 
             <div class="section--footer__links reveal">
                 <div class="section--footer__brand">
-                    <a class="section--footer__logo" href="/" aria-label="Corvexa home">
+                    <a class="section--footer__logo" href="./index.html" aria-label="Corvexa home">
                         <img src="./images/logo-corvexa.svg" alt="Corvexa" width="185" height="35">
                     </a>
                     <p class="section--footer__tagline">Corvexa helps B2B websites turn visitor<br>intent into
                         qualified leads.</p>
                 </div>
-
                 <details class="section--footer__col" data-footer-col>
                     <summary class="section--footer__col-title">
                         Product
                         <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
-                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </summary>
                     <ul class="section--footer__col-list">
-                        <li><a href="#how-it-works">How it works</a></li>
-                        <li><a href="#integrations">Integrations</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#trial">Start free trial</a></li>
-                    </ul>
-                </details>
-
-                <details class="section--footer__col" data-footer-col>
-                    <summary class="section--footer__col-title">
-                        Use Cases
-                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
-                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </summary>
-                    <!-- PLACEHOLDER: Figma uses "Case Studies 1" through "Case Studies 8" as link labels — replace with real case-study titles -->
-                    <ul class="section--footer__col-list">
-                        <li><a href="#case-1">Case Studies 1</a></li>
-                        <li><a href="#case-2">Case Studies 2</a></li>
-                        <li><a href="#case-3">Case Studies 3</a></li>
-                        <li><a href="#case-4">Case Studies 4</a></li>
-                        <li><a href="#case-5">Case Studies 5</a></li>
-                        <li><a href="#case-6">Case Studies 6</a></li>
-                        <li><a href="#case-7">Case Studies 7</a></li>
-                        <li><a href="#case-8">Case Studies 8</a></li>
+                        <li><a href="./index.html#how-it-works">How it works</a></li>
+                        <li><a href="./integrations.html">Integrations</a></li>
+                        <li><a href="./pricing.html">Pricing</a></li>
+                        <li><a href="./casestudy.html">Case Studies</a></li>
                     </ul>
                 </details>
 
@@ -717,30 +684,38 @@
                     <summary class="section--footer__col-title">
                         Company
                         <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
-                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </summary>
                     <ul class="section--footer__col-list">
-                        <li><a href="#about">About us</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </details>
 
                 <details class="section--footer__col" data-footer-col>
                     <summary class="section--footer__col-title">
-                        Legal
+                        Resources
                         <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
-                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </summary>
                     <ul class="section--footer__col-list">
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms of Service</a></li>
-                        <li><a href="#cookies">Cookie Policy</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./documentation.html">Documentation</a></li>
+                    </ul>
+                </details>
+                <details class="section--footer__col" data-footer-col>
+                    <summary class="section--footer__col-title">
+                        Legal
+                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </summary>
+                    <ul class="section--footer__col-list">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
                     </ul>
                 </details>
             </div>
@@ -808,24 +783,43 @@
             <span id="mobile-nav-title" class="mobile-nav__title">Menu</span>
             <button type="button" class="mobile-nav__close" data-mobile-nav-close aria-label="Close menu">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" />
+                    <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                 </svg>
             </button>
         </div>
         <nav aria-label="Mobile">
             <ul class="mobile-nav__list">
-                <li><a href="./index.html#how-it-works">How it works</a></li>
-                <li><a href="./index.html#integrations">Integrations</a></li>
-                <li><a href="./pricing.html">Pricing</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#resource">Resource</a></li>
-                <li><a href="./about.html">About us</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="#login">Log in</a></li>
+                <li data-text="How it works"><a href="./index.html#how-it-works">How it works</a></li>
+                <li data-text="Integrations"><a href="./integrations.html">Integrations</a></li>
+                <li data-text="Pricing"><a href="./pricing.html">Pricing</a></li>
+                <li data-text="Case Studies"><a href="./casestudy.html">Case Studies</a></li>
+                <li data-text="Resource">
+                    <details>
+                        <summary>
+                            Resource
+                            <svg viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+                        <ul class="mobile-nav__dropdown-menu">
+                            <li data-text="About Us"><a href="./about.html">About Us</a></li>
+                            <li data-text="Blog"><a href="./blog.html">Blog</a></li>
+                            <li data-text="Documentation"><a href="./documentation.html">Documentation</a></li>
+                            <li data-text="Contact"><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </details>
+                </li>
             </ul>
         </nav>
-        <a class="btn btn--primary mobile-nav__cta" href="#book-demo">Book a demo</a>
+        <div class="mobile-nav__actions">
+            <a class="btn btn--primary mobile-nav__cta" href="https://corvexa.ai/get-a-demo/">Book a demo</a>
+            <a class="btn btn--secondary mobile-nav__cta" href="#login">
+                Log in
+                <svg class="btn__icon" viewBox="0 0 14 14" aria-hidden="true">
+                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
     </aside>
 
     <script src="js/script.js"></script>        

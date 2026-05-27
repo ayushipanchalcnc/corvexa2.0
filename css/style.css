@@ -910,7 +910,7 @@ section[id] {
     position: sticky;
     top: 0;
     z-index: 900;
-    transition: box-shadow 0.3s ease, padding 0.3s ease;
+    transition: box-shadow 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
 }
 
 .site-header.is-scrolled {
@@ -918,6 +918,11 @@ section[id] {
     box-shadow: var(--shadow-card);
     padding-top: var(--space-16);
     padding-bottom: var(--space-16);
+}
+
+/* Disable transitions during back-to-top scroll to prevent jerk */
+.site-header.is-scrolling-to-top {
+    transition: none !important;
 }
 
 /* Header Responsive */
@@ -3453,6 +3458,13 @@ section[id] {
 }
 
 @media (max-width: 1024px) {
+    .section--integrations__card.reveal,
+    .section--integrations__card.reveal.is-visible {
+        transform: none !important;
+        transition-property: opacity, box-shadow, border-color;
+        will-change: opacity;
+    }
+
     .section--integrations__card:hover {
         transform: none;
         box-shadow: none;
