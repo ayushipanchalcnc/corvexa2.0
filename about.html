@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us &mdash; Corvexa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="site-header section--hero__nav">
+        <a class="section--hero__logo" href="./index.html" aria-label="Corvexa home">
+            <img src="./images/logo-corvexa.svg" alt="Corvexa" width="185" height="35">
+        </a>
+        <nav class="section--hero__nav-menu" aria-label="Primary">
+            <ul class="section--hero__nav-list">
+                <li><a href="./index.html#how-it-works">How it works</a></li>
+                <li><a href="./index.html#integrations">Integrations</a></li>
+                <li><a href="./pricing.html">Pricing</a></li>
+                <li class="nav-dropdown-container">
+                    <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu" aria-expanded="false">
+                        Solutions
+                        <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                            <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="./solutions.html">AI Agents</a>
+                        <a href="./solutions.html">Sales Automation</a>
+                        <a href="./solutions.html">Customer Support</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown-container">
+                    <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu" aria-expanded="false">
+                        Resource
+                        <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                            <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="./blog.html">Blog</a>
+                        <a href="./documentation.html">Documentation</a>
+                        <a href="./help.html">Help Center</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="section--hero__actions">
+            <a class="btn btn--primary" href="#book-demo">Book a demo</a>
+            <a class="btn btn--secondary" href="#login">
+                Log in
+                <svg class="btn__icon" viewBox="0 0 14 14" aria-hidden="true">
+                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+        <button type="button" class="hamburger" data-mobile-nav-trigger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </header>
+
+    <main class="page-about">
+        <!-- Section: About Hero -->
+        <section class="section--about-hero">
+            <div class="section--about-hero__row reveal">
+                <h1 class="section--about-hero__title">Who We Are</h1>
+                <span class="section--about-hero__divider" aria-hidden="true"></span>
+                <div class="section--about-hero__intro">
+                    <p class="section--about-hero__eyebrow">
+                        <span class="section--about-hero__eyebrow-dot" aria-hidden="true"></span>
+                        ABOUT US
+                    </p>
+                    <p class="section--about-hero__description">At Corvexa, we believe every website visitor is an opportunity. Founded by a team of innovators in AI and web technology, we help businesses turn visitors into high-quality leads automatically, without manual effort.</p>
+                </div>
+            </div>
+            <hr class="section--about-hero__rule">
+        </section>
+
+        <!-- Section: About story (hero image + body + stats) -->
+        <section class="section--about-story">
+            <div class="section--about-story__container">
+                <!-- PLACEHOLDER: Figma marks this as a video slot. Designer reference: https://in.pinterest.com/pin/600034350373163048/ — swap this <figure> for a real <video autoplay muted loop playsinline> element when the asset is ready. -->
+                <figure class="section--about-story__media reveal">
+                    <img class="section--about-story__media-img" src="./images/about-hero-bg.jpg" alt="" width="1399" height="500">
+                    <figcaption class="section--about-story__media-caption">Product intro video</figcaption>
+                </figure>
+
+                <p class="section--about-story__description reveal">
+                    <span class="section--about-story__description-lead">With over 15 years of experience,</span>
+                    we specialize in delivering tailored solutions that drive success across industries like finance, technology, and operations. Our dedicated team is focused on accelerating growth and helping your business thrive in an ever-changing market.
+                </p>
+
+                <aside class="section--reality__stats reveal">
+                    <ul class="section--reality__stats-grid">
+                        <li class="section--reality__stat">
+                            <p class="section--reality__stat-value">83%+</p>
+                            <p class="section--reality__stat-label">Visitor Bounce Rate</p>
+                            <p class="section--reality__stat-body">Visitors leave your website without taking action or starting a conversation.</p>
+                        </li>
+                        <li class="section--reality__stat">
+                            <p class="section--reality__stat-value">4X+</p>
+                            <p class="section--reality__stat-label">Faster Response Time</p>
+                            <p class="section--reality__stat-body">Instant AI conversations help businesses respond to visitors faster and increase conversion opportunities.</p>
+                        </li>
+                        <li class="section--reality__stat">
+                            <p class="section--reality__stat-value">8 sec</p>
+                            <p class="section--reality__stat-label">First Impression Window</p>
+                            <p class="section--reality__stat-body">Visitors decide within seconds whether to stay, explore, or leave your website completely.</p>
+                        </li>
+                        <li class="section--reality__stat section--reality__stat--cta">
+                            <p class="section--reality__stat-value">&lt;1%</p>
+                            <p class="section--reality__stat-label">Visitor Conversion Rate</p>
+                            <a class="btn btn--inverse" href="#book-demo">
+                                Book a demo
+                                <svg class="btn__icon" viewBox="0 0 14 14" aria-hidden="true">
+                                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Section: Principles -->
+        <section class="section--about-principles">
+            <div class="section--about-principles__container">
+                <header class="section--about-principles__header reveal">
+                    <h2 class="section--about-principles__title">The Principles Behind Corvexa</h2>
+                    <!-- PLACEHOLDER: Figma subtitle appears truncated mid-sentence ("...help businesses turn visitors into"). Replace with the full intended copy when ready. -->
+                    <p class="section--about-principles__subtitle">At Corvexa, we believe every website visitor is an opportunity. Founded by a team of innovators in AI and web technology, we help businesses turn visitors into</p>
+                </header>
+
+                <ul class="section--about-principles__cards">
+                    <li class="section--about-principles__card reveal">
+                        <span class="section--about-principles__card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 28 28">
+                                <path d="M3 6a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-4l-5 5-5-5H6a3 3 0 0 1-3-3z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                                <circle cx="10" cy="10" r="1.5" fill="currentColor"/>
+                                <circle cx="18" cy="10" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <h3 class="section--about-principles__card-title">Most Chatbots Are Built for the Vendor - Not the Buyer</h3>
+                        <p class="section--about-principles__card-body">Most tools focus on automation and reducing support load. Corvexa is built to help sales teams identify real buying intent and turn conversations into qualified opportunities.</p>
+                    </li>
+
+                    <li class="section--about-principles__card reveal">
+                        <span class="section--about-principles__card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 28 28">
+                                <path d="M8 4h12v6a6 6 0 0 1-12 0z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                                <path d="M8 5H4v3a3 3 0 0 0 4 3M20 5h4v3a3 3 0 0 1-4 3" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M14 16v4M10 24h8l-1-3h-6z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <h3 class="section--about-principles__card-title">Generic Setup Produces Generic Results</h3>
+                        <p class="section--about-principles__card-body">Every business sells differently. Corvexa agents are configured around your positioning, ICP, buyer journey, and qualification signals not generic templates or one size fits all flows.</p>
+                    </li>
+
+                    <li class="section--about-principles__card reveal">
+                        <span class="section--about-principles__card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 28 28">
+                                <circle cx="14" cy="9" r="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                <path d="M4 25c0-5 4-9 10-9s10 4 10 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M21 7l1.5 1.5L26 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <h3 class="section--about-principles__card-title">The Best Lead Is Already Pre-Qualified</h3>
+                        <p class="section--about-principles__card-body">A name and email address are not enough. Corvexa focuses on identifying urgency, intent, budget signals, and sales readiness before leads ever reach your pipeline.</p>
+                    </li>
+
+                    <li class="section--about-principles__card reveal">
+                        <span class="section--about-principles__card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 28 28">
+                                <path d="M3 5h13a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H8l-5 4z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                                <path d="M14 11h9a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-1l-3 3v-3h-2" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <h3 class="section--about-principles__card-title">Conversations Should Create Pipeline Not Noise</h3>
+                        <p class="section--about-principles__card-body">Corvexa surfaces meaningful buyer conversations so revenue teams can prioritize the right leads faster.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section: Our Promise -->
+        <section class="section--about-promise">
+            <div class="section--about-promise__container">
+                <header class="section--about-promise__header reveal">
+                    <h2 class="section--about-promise__title">Our Promise</h2>
+                    <p class="section--about-promise__description">We&rsquo;re committed to helping businesses grow by maximizing every website visitor. With Corvexa, you get an AI partner that works silently, learns continuously, and turns conversations into revenue.</p>
+                </header>
+
+                <div class="section--about-promise__stack reveal">                    
+                    <article class="section--about-promise__main">
+                        <header class="section--about-promise__main-header">
+                            <span class="section--about-promise__main-icon" aria-hidden="true">
+                                <svg viewBox="0 0 50 50">
+                                    <circle cx="14" cy="16" r="5.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                    <circle cx="36" cy="16" r="5.5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                    <circle cx="25" cy="11" r="6" fill="currentColor"/>
+                                    <path d="M4 40c0-6 4.5-10 10-10s10 4 10 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                    <path d="M26 40c0-6 4.5-10 10-10s10 4 10 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                    <path d="M14 40c0-7 5-11 11-11s11 4 11 11" fill="currentColor"/>
+                                </svg>
+                            </span>
+                            <div class="section--about-promise__main-meta">
+                                <p class="section--about-promise__main-step">Step 1</p>
+                                <p class="section--about-promise__main-name">Understand</p>
+                            </div>
+                        </header>
+                        <p class="section--about-promise__main-description">We study visitor behavior, traffic sources, intent signals, and on-site interactions to understand what your audience actually needs. Corvexa adapts conversations dynamically to match user context and business goals.</p>
+                    </article>                 
+                    <article class="section--about-promise__main">
+                        <header class="section--about-promise__main-header">
+                            <span class="section--about-promise__main-icon" aria-hidden="true">
+                                <svg viewBox="0 0 50 50">
+                                    <path d="M10 25h30M25 10v30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                    <circle cx="25" cy="25" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                                </svg>
+                            </span>
+                            <div class="section--about-promise__main-meta">
+                                <p class="section--about-promise__main-step">Step 2</p>
+                                <p class="section--about-promise__main-name">Engage</p>
+                            </div>
+                        </header>
+                        <p class="section--about-promise__main-description">We engage visitors instantly with personalized, AI-driven conversations. Corvexa answers questions, handles objections, and builds trust 24/7 without requiring manual intervention from your team.</p>
+                    </article>                 
+                    <article class="section--about-promise__main">
+                        <header class="section--about-promise__main-header">
+                            <span class="section--about-promise__main-icon" aria-hidden="true">
+                                <svg viewBox="0 0 50 50">
+                                    <path d="M15 25l10 10 15-15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M25 45c-11 0-20-9-20-20s9-20 20-20 20 9 20 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <div class="section--about-promise__main-meta">
+                                <p class="section--about-promise__main-step">Step 3</p>
+                                <p class="section--about-promise__main-name">Convert</p>
+                            </div>
+                        </header>
+                        <p class="section--about-promise__main-description">We convert engaged prospects into qualified leads. Corvexa seamlessly books meetings, captures contact details, and routes high-value opportunities directly to your sales pipeline.</p>
+                    </article>                 
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section--footer">            
+                <div class="footer-logo"><img src="images/footer-logo.svg" alt=""></div>
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>            
+            <div class="section--footer__main">
+                <div class="section--footer__cta reveal">
+                    <div class="section--footer__cta-text">
+                        <h2 class="section--footer__title">Ready to turn visitor intent into qualified leads?</h2>
+                        <p class="section--footer__subtitle">Join the forward-thinking sales teams already using Corvexa to win more deals.</p>
+                    </div>
+                    <div class="section--footer__buttons">
+                        <a class="btn btn--accent" href="#trial">Start free trial</a>
+                        <a class="btn btn--ghost-light" href="#book-demo">
+                            Book a demo
+                            
+                            <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                <path d="M1 6.36396C0.447715 6.36396 0 6.81168 0 7.36396C0 7.91625 0.447715 8.36396 1 8.36396V7.36396V6.36396ZM14.7071 8.07107C15.0976 7.68054 15.0976 7.04738 14.7071 6.65685L8.34315 0.292892C7.95262 -0.0976319 7.31946 -0.0976319 6.92893 0.292892C6.53841 0.683417 6.53841 1.31658 6.92893 1.70711L12.5858 7.36396L6.92893 13.0208C6.53841 13.4113 6.53841 14.0445 6.92893 14.435C7.31946 14.8256 7.95262 14.8256 8.34315 14.435L14.7071 8.07107ZM1 7.36396V8.36396H14V7.36396V6.36396H1V7.36396Z" fill="currentColor"/>
+                              </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <hr class="section--footer__rule">
+
+                <div class="section--footer__links reveal">
+                    <div class="section--footer__brand">
+                        <a class="section--footer__logo" href="/" aria-label="Corvexa home">
+                            <img src="./images/logo-corvexa.svg" alt="Corvexa" width="185" height="35">
+                        </a>
+                        <p class="section--footer__tagline">Corvexa helps B2B websites turn visitor<br>intent into qualified leads.</p>
+                    </div>
+
+                    <details class="section--footer__col" data-footer-col>
+                        <summary class="section--footer__col-title">
+                            Product
+                            <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <ul class="section--footer__col-list">
+                            <li><a href="#how-it-works">How it works</a></li>
+                            <li><a href="#integrations">Integrations</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#trial">Start free trial</a></li>
+                        </ul>
+                    </details>
+
+                    <details class="section--footer__col" data-footer-col>
+                        <summary class="section--footer__col-title">
+                            Use Cases
+                            <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <!-- PLACEHOLDER: Figma uses "Case Studies 1" through "Case Studies 8" as link labels — replace with real case-study titles -->
+                        <ul class="section--footer__col-list">
+                            <li><a href="#case-1">Case Studies 1</a></li>
+                            <li><a href="#case-2">Case Studies 2</a></li>
+                            <li><a href="#case-3">Case Studies 3</a></li>
+                            <li><a href="#case-4">Case Studies 4</a></li>
+                            <li><a href="#case-5">Case Studies 5</a></li>
+                            <li><a href="#case-6">Case Studies 6</a></li>
+                            <li><a href="#case-7">Case Studies 7</a></li>
+                            <li><a href="#case-8">Case Studies 8</a></li>
+                        </ul>
+                    </details>
+
+                    <details class="section--footer__col" data-footer-col>
+                        <summary class="section--footer__col-title">
+                            Company
+                            <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <ul class="section--footer__col-list">
+                            <li><a href="#about">About us</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </details>
+
+                    <details class="section--footer__col" data-footer-col>
+                        <summary class="section--footer__col-title">
+                            Legal
+                            <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                                <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <ul class="section--footer__col-list">
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                            <li><a href="#cookies">Cookie Policy</a></li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+
+            <div class="section--footer__bar">
+                <p class="section--footer__copy">Copyright &copy; 2025 All Rights Reserved.</p>
+                <ul class="section--footer__social">
+                    <li>
+                        <a href="#linkedin" aria-label="Corvexa on LinkedIn">                            
+                            <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.08787 13V4.22847H0.172378V13H3.08787ZM1.63011 3.03087C2.6468 3.03087 3.27961 2.35731 3.27961 1.51556C3.26066 0.654865 2.64681 -9.53674e-07 1.6494 -9.53674e-07C0.652096 -9.53674e-07 3.05176e-05 0.654865 3.05176e-05 1.51556C3.05176e-05 2.35731 0.632701 3.03087 1.61111 3.03087H1.63011Z" fill="#011448"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.70148 13H7.61694V8.10161C7.61694 7.83945 7.63589 7.57756 7.71287 7.39016C7.92364 6.86637 8.40336 6.32389 9.20877 6.32389C10.2637 6.32389 10.6858 7.12826 10.6858 8.30744V13H13.601V7.97053C13.601 5.27631 12.1626 4.02264 10.2445 4.02264C8.67166 4.02264 7.98118 4.90177 7.59755 5.50057H7.61702V4.22847H4.70156C4.73982 5.05153 4.70148 13 4.70148 13Z" fill="#011448"/>
+                            </svg>    
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#instagram" aria-label="Corvexa on Instagram">   
+                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.01995 13H3.98005C1.78539 13 0 11.2146 0 9.01995V3.98005C0 1.78539 1.78539 0 3.98005 0H9.01995C11.2146 0 13 1.78539 13 3.98005V9.01995C13 11.2144 11.2146 13 9.01995 13ZM3.98005 0.973452C2.32224 0.973452 0.973452 2.32224 0.973452 3.98005V9.01995C0.973452 10.6778 2.32224 12.0265 3.98005 12.0265H9.01995C10.6779 12.0265 12.0267 10.6778 12.0267 9.01995V3.98005C12.0267 2.32224 10.6779 0.973452 9.01995 0.973452H3.98005Z" fill="#011448"/>
+                                <path d="M6.50018 9.78781C4.68694 9.78781 3.21191 8.31261 3.21191 6.49937C3.21191 4.68614 4.68694 3.21094 6.50018 3.21094C8.31342 3.21094 9.78862 4.68614 9.78862 6.49937C9.78862 8.31261 8.31342 9.78781 6.50018 9.78781ZM6.50018 4.20785C5.23662 4.20785 4.20865 5.23581 4.20865 6.49954C4.20865 7.7631 5.23662 8.79107 6.50018 8.79107C7.76374 8.79107 8.79188 7.7631 8.79188 6.49954C8.79188 5.23581 7.76391 4.20785 6.50018 4.20785Z" fill="#011448"/>
+                                <path d="M11.0023 2.85469C11.0023 3.32758 10.619 3.71085 10.1461 3.71085C9.67325 3.71085 9.28998 3.32758 9.28998 2.85469C9.28998 2.38181 9.67325 1.99854 10.1461 1.99854C10.619 1.99854 11.0023 2.38181 11.0023 2.85469Z" fill="#011448"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#youtube" aria-label="Corvexa on YouTube">                            
+                            <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.7894 0H2.78568C1.24717 0 0 1.24717 0 2.78539V10.2143C0 11.7528 1.24717 13 2.78568 13H15.7894C17.3279 13 18.5751 11.7528 18.5751 10.2143V2.78539C18.5754 1.24746 17.3282 0 15.7894 0ZM12.6357 6.20724L7.52023 9.577C7.47616 9.60648 7.41778 9.575 7.41778 9.52263V2.78195C7.41778 2.729 7.47645 2.69782 7.52023 2.72758L12.6357 6.09735C12.6758 6.1231 12.6758 6.18148 12.6357 6.20724Z" fill="#011448"/>
+                            </svg>    
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#twitter" aria-label="Corvexa on X">                            
+                            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.04505 5.36142L14.0578 0H12.1542L8.21988 4.2088L5.20673 0H0L5.27035 7.36228L0 13H1.90357L6.09615 8.51552L9.30639 13H14.5131L9.04505 5.36204V5.36142ZM2.6832 1.3784H4.4982L11.8305 11.6204H10.0155L2.6832 1.3784Z" fill="#011448"/>
+                            </svg>                            
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+    <div class="mobile-nav-backdrop" data-mobile-nav-backdrop hidden></div>
+    <aside class="mobile-nav" data-mobile-nav id="mobile-nav" aria-hidden="true" aria-labelledby="mobile-nav-title">
+        <div class="mobile-nav__header">
+            <span id="mobile-nav-title" class="mobile-nav__title">Menu</span>
+            <button type="button" class="mobile-nav__close" data-mobile-nav-close aria-label="Close menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        <nav aria-label="Mobile">
+            <ul class="mobile-nav__list">
+                <li><a href="./index.html#how-it-works">How it works</a></li>
+                <li><a href="./index.html#integrations">Integrations</a></li>
+                <li><a href="./pricing.html">Pricing</a></li>
+                <li>
+                    <details>
+                        <summary>
+                            Solutions
+                            <svg viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <ul class="mobile-nav__dropdown-menu">
+                            <li><a href="./solutions.html">AI Agents</a></li>
+                            <li><a href="./solutions.html">Sales Automation</a></li>
+                            <li><a href="./solutions.html">Customer Support</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            Resource
+                            <svg viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </summary>
+                        <ul class="mobile-nav__dropdown-menu">
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./documentation.html">Documentation</a></li>
+                            <li><a href="./help.html">Help Center</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="./about.html" aria-current="page">About us</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="#login">Log in</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-nav__actions">
+            <a class="btn btn--primary mobile-nav__cta" href="#book-demo">Book a demo</a>
+            <a class="btn btn--secondary mobile-nav__cta" href="#login">
+                Log in
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                    <path d="M1 6.36396C0.447715 6.36396 0 6.81168 0 7.36396C0 7.91625 0.447715 8.36396 1 8.36396V7.36396V6.36396ZM14.7071 8.07107C15.0976 7.68054 15.0976 7.04738 14.7071 6.65685L8.34315 0.292892C7.95262 -0.0976319 7.31946 -0.0976319 6.92893 0.292892C6.53841 0.683417 6.53841 1.31658 6.92893 1.70711L12.5858 7.36396L6.92893 13.0208C6.53841 13.4113 6.53841 14.0445 6.92893 14.435C7.31946 14.8256 7.95262 14.8256 8.34315 14.435L14.7071 8.07107ZM1 7.36396V8.36396H14V7.36396V6.36396H1V7.36396Z" fill="currentColor"/>
+                </svg>
+            </a>
+        </div>
+    </aside>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
