@@ -14,79 +14,143 @@
 </head>
 
 <body>
-    <main>
-        <div id="backToTop" class="back-to-top" aria-label="Back to top">
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="18 15 12 9 6 15"></polyline>
-            </svg>
-        </div>
+    <div id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </div>
 
-        <!-- Section: Hero -->
-        <header class="site-header section--hero__nav">
-            <a class="section--hero__logo" href="./index.html" aria-label="Corvexa home">
-                <img src="./images/logo-corvexa.svg" alt="Corvexa" width="185" height="35">
+    <!-- Header -->
+    <header class="site-header section--hero__nav">
+        <a class="section--hero__logo" href="./index.html" aria-label="Corvexa home">
+            <img src="./images/logo-corvexa.svg" alt="Corvexa" width="185" height="35">
+        </a>
+        <nav class="section--hero__nav-menu" aria-label="Primary">
+            <ul class="section--hero__nav-list">
+                <li data-text="How it works"><a href="./index.html#how-it-works">How it works</a></li>
+                <li data-text="Integrations"><a href="./integrations.html">Integrations</a></li>
+                <li data-text="Pricing"><a href="./pricing.html">Pricing</a></li>
+                <li class="nav-dropdown-container" data-text="Solutions">
+                    <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu"
+                        aria-expanded="false">
+                        Solutions
+                        <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7"
+                            aria-hidden="true">
+                            <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="./solutions.html">AI Agents</a>
+                        <a href="./solutions.html">Sales Automation</a>
+                        <a href="./solutions.html">Customer Support</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown-container" data-text="Resource">
+                    <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu"
+                        aria-expanded="false">
+                        Resource
+                        <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7"
+                            aria-hidden="true">
+                            <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="./about.html">About Us</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./documentation.html">Documentation</a>
+                        <a href="./contact.html">Contact</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="section--hero__actions">
+            <a class="btn btn--primary" href="#book-demo">Book a demo</a>
+            <a class="btn btn--secondary" href="#login">
+                Log in
+                <svg class="btn__icon" viewBox="0 0 14 14" aria-hidden="true">
+                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </a>
-            <nav class="section--hero__nav-menu" aria-label="Primary">
-                <ul class="section--hero__nav-list">
-                    <li><a href="./index.html#how-it-works">How it works</a></li>
-                    <li><a href="./integrations.html">Integrations</a></li>
-                    <li><a href="./pricing.html">Pricing</a></li>
-                    <li class="nav-dropdown-container">
-                        <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu"
-                            aria-expanded="false">
-                            Solutions
-                            <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7"
-                                aria-hidden="true">
-                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <div class="nav-dropdown-menu">
-                            <a href="./solutions.html">AI Agents</a>
-                            <a href="./solutions.html">Sales Automation</a>
-                            <a href="./solutions.html">Customer Support</a>
-                        </div>
-                    </li>
-                    <li class="nav-dropdown-container">
-                        <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu"
-                            aria-expanded="false">
-                            Resource
-                            <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7"
-                                aria-hidden="true">
-                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <div class="nav-dropdown-menu">
-                            <a href="./about.html">About Us</a>
-                            <a href="./blog.html">Blog</a>
-                            <a href="./documentation.html">Documentation</a>
-                            <a href="./contact.html">Contact</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <div class="section--hero__actions">
-                <a class="btn btn--primary" href="#book-demo">Book a demo</a>
-                <a class="btn btn--secondary" href="#login">
-                    Log in
-                    <svg class="btn__icon" viewBox="0 0 14 14" aria-hidden="true">
-                        <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </a>
-            </div>
-            <button type="button" class="hamburger" data-mobile-nav-trigger aria-label="Open menu" aria-expanded="false"
-                aria-controls="mobile-nav">
+        </div>
+        <button type="button" class="hamburger" data-mobile-nav-trigger aria-label="Open menu" aria-expanded="false"
+            aria-controls="mobile-nav">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" />
+            </svg>
+        </button>
+    </header>
+
+    <div class="mobile-nav-backdrop" data-mobile-nav-backdrop hidden></div>
+    <aside class="mobile-nav" data-mobile-nav id="mobile-nav" aria-hidden="true" aria-labelledby="mobile-nav-title">
+        <div class="mobile-nav__header">
+            <button type="button" class="mobile-nav__close" data-mobile-nav-close aria-label="Close menu">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"
+                    <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" />
                 </svg>
             </button>
-        </header>
+        </div>
+        <nav aria-label="Mobile">
+            <ul class="mobile-nav__list">
+                <li data-text="How it works"><a href="#how-it-works">How it works</a></li>
+                <li data-text="Integrations"><a href="#integrations">Integrations</a></li>
+                <li data-text="Pricing"><a href="./pricing.html">Pricing</a></li>
+                <li data-text="Solutions">
+                    <details>
+                        <summary>
+                            Solutions
+                            <svg viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+                        <ul class="mobile-nav__dropdown-menu">
+                            <li data-text="AI Agents"><a href="./solutions.html">AI Agents</a></li>
+                            <li data-text="Sales Automation"><a href="./solutions.html">Sales Automation</a></li>
+                            <li data-text="Customer Support"><a href="./solutions.html">Customer Support</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li data-text="Resource">
+                    <details>
+                        <summary>
+                            Resource
+                            <svg viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+                        <ul class="mobile-nav__dropdown-menu">
+                            <li data-text="About Us"><a href="./about.html">About Us</a></li>
+                            <li data-text="Blog"><a href="./blog.html">Blog</a></li>
+                            <li data-text="Documentation"><a href="./documentation.html">Documentation</a></li>
+                            <li data-text="Contact"><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile-nav__actions">
+            <a class="btn btn--primary mobile-nav__cta" href="https://corvexa.ai/get-a-demo/">Book a demo</a>
+            <a class="btn btn--secondary mobile-nav__cta" href="#login">
+                Log in
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
+                    fill="none">
+                    <path
+                        d="M1 6.36396C0.447715 6.36396 0 6.81168 0 7.36396C0 7.91625 0.447715 8.36396 1 8.36396V7.36396V6.36396ZM14.7071 8.07107C15.0976 7.68054 15.0976 7.04738 14.7071 6.65685L8.34315 0.292892C7.95262 -0.0976319 7.31946 -0.0976319 6.92893 0.292892C6.53841 0.683417 6.53841 1.31658 6.92893 1.70711L12.5858 7.36396L6.92893 13.0208C6.53841 13.4113 6.53841 14.0445 6.92893 14.435C7.31946 14.8256 7.95262 14.8256 8.34315 14.435L14.7071 8.07107ZM1 7.36396V8.36396H14V7.36396V6.36396H1V7.36396Z"
+                        fill="currentColor" />
+                </svg>
+            </a>
+        </div>
+    </aside>
 
-        <!-- Section: Hero -->
+    <main>
+    <!-- Section: Hero -->
         <section class="section--hero" id="hero">
             <div class="section--hero__body">
                 <div class="section--hero__content">
@@ -1683,236 +1747,172 @@
                 </article>
             </div>
         </section>
-
-        <!-- Section: Footer -->
-        <footer class="section--footer">
-            <div class="footer-logo"><img src="images/footer-logo.svg" alt=""></div>
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
-            <div class="circle circle-3"></div>
-            <div class="section--footer__main">
-                <div class="section--footer__cta reveal">
-                    <div class="section--footer__cta-text">
-                        <h2 class="section--footer__title">Ready to turn visitor intent into qualified leads?</h2>
-                        <p class="section--footer__subtitle">Join the forward-thinking sales teams already using Corvexa
-                            to win more deals.</p>
-                    </div>
-                    <div class="section--footer__buttons">
-                        <a class="btn btn--accent" href="#trial">Start free trial</a>
-                        <a class="btn btn--ghost-light" href="https://corvexa.ai/get-a-demo/">
-                            Book a demo
-
-                            <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
-                                viewBox="0 0 15 15" fill="none">
-                                <path
-                                    d="M1 6.36396C0.447715 6.36396 0 6.81168 0 7.36396C0 7.91625 0.447715 8.36396 1 8.36396V7.36396V6.36396ZM14.7071 8.07107C15.0976 7.68054 15.0976 7.04738 14.7071 6.65685L8.34315 0.292892C7.95262 -0.0976319 7.31946 -0.0976319 6.92893 0.292892C6.53841 0.683417 6.53841 1.31658 6.92893 1.70711L12.5858 7.36396L6.92893 13.0208C6.53841 13.4113 6.53841 14.0445 6.92893 14.435C7.31946 14.8256 7.95262 14.8256 8.34315 14.435L14.7071 8.07107ZM1 7.36396V8.36396H14V7.36396V6.36396H1V7.36396Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <hr class="section--footer__rule">
-
-                <div class="section--footer__links reveal">
-                    <div class="section--footer__brand">
-                        <a class="section--footer__logo" href="/" aria-label="Corvexa home">
-                            <img src="./images/logo-corvexa.svg" alt="Corvexa" width="185" height="35">
-                        </a>
-                        <p class="section--footer__tagline">Corvexa helps B2B websites turn visitor<br>intent into
-                            qualified leads.</p>
-                    </div>
-
-                    <details class="section--footer__col" data-footer-col>
-                        <summary class="section--footer__col-title">
-                            Product
-                            <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
-                                <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </summary>
-                        <ul class="section--footer__col-list">
-                            <li><a href="#how-it-works">How it works</a></li>
-                            <li><a href="#integrations">Integrations</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
-                            <li><a href="#trial">Start free trial</a></li>
-                        </ul>
-                    </details>
-
-                    <details class="section--footer__col" data-footer-col>
-                        <summary class="section--footer__col-title">
-                            Use Cases
-                            <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
-                                <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </summary>
-                        <!-- PLACEHOLDER: Figma uses "Case Studies 1" through "Case Studies 8" as link labels — replace with real case-study titles -->
-                        <ul class="section--footer__col-list">
-                            <li><a href="#case-1">Case Studies 1</a></li>
-                            <li><a href="#case-2">Case Studies 2</a></li>
-                            <li><a href="#case-3">Case Studies 3</a></li>
-                            <li><a href="#case-4">Case Studies 4</a></li>
-                            <li><a href="#case-5">Case Studies 5</a></li>
-                            <li><a href="#case-6">Case Studies 6</a></li>
-                            <li><a href="#case-7">Case Studies 7</a></li>
-                            <li><a href="#case-8">Case Studies 8</a></li>
-                        </ul>
-                    </details>
-
-                    <details class="section--footer__col" data-footer-col>
-                        <summary class="section--footer__col-title">
-                            Company
-                            <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
-                                <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </summary>
-                        <ul class="section--footer__col-list">
-                            <li><a href="#about">About us</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#careers">Careers</a></li>
-                        </ul>
-                    </details>
-
-                    <details class="section--footer__col" data-footer-col>
-                        <summary class="section--footer__col-title">
-                            Legal
-                            <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
-                                <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </summary>
-                        <ul class="section--footer__col-list">
-                            <li><a href="#privacy">Privacy Policy</a></li>
-                            <li><a href="#terms">Terms of Service</a></li>
-                            <li><a href="#cookies">Cookie Policy</a></li>
-                        </ul>
-                    </details>
-                </div>
-            </div>
-
-            <div class="section--footer__bar">
-                <p class="section--footer__copy">Copyright &copy; 2025 All Rights Reserved.</p>
-                <ul class="section--footer__social">
-                    <li>
-                        <a href="#linkedin" aria-label="Corvexa on LinkedIn">
-                            <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M3.08787 13V4.22847H0.172378V13H3.08787ZM1.63011 3.03087C2.6468 3.03087 3.27961 2.35731 3.27961 1.51556C3.26066 0.654865 2.64681 -9.53674e-07 1.6494 -9.53674e-07C0.652096 -9.53674e-07 3.05176e-05 0.654865 3.05176e-05 1.51556C3.05176e-05 2.35731 0.632701 3.03087 1.61111 3.03087H1.63011Z"
-                                    fill="#011448" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M4.70148 13H7.61694V8.10161C7.61694 7.83945 7.63589 7.57756 7.71287 7.39016C7.92364 6.86637 8.40336 6.32389 9.20877 6.32389C10.2637 6.32389 10.6858 7.12826 10.6858 8.30744V13H13.601V7.97053C13.601 5.27631 12.1626 4.02264 10.2445 4.02264C8.67166 4.02264 7.98118 4.90177 7.59755 5.50057H7.61702V4.22847H4.70156C4.73982 5.05153 4.70148 13 4.70148 13Z"
-                                    fill="#011448" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#instagram" aria-label="Corvexa on Instagram">
-                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9.01995 13H3.98005C1.78539 13 0 11.2146 0 9.01995V3.98005C0 1.78539 1.78539 0 3.98005 0H9.01995C11.2146 0 13 1.78539 13 3.98005V9.01995C13 11.2144 11.2146 13 9.01995 13ZM3.98005 0.973452C2.32224 0.973452 0.973452 2.32224 0.973452 3.98005V9.01995C0.973452 10.6778 2.32224 12.0265 3.98005 12.0265H9.01995C10.6779 12.0265 12.0267 10.6778 12.0267 9.01995V3.98005C12.0267 2.32224 10.6779 0.973452 9.01995 0.973452H3.98005Z"
-                                    fill="#011448" />
-                                <path
-                                    d="M6.50018 9.78781C4.68694 9.78781 3.21191 8.31261 3.21191 6.49937C3.21191 4.68614 4.68694 3.21094 6.50018 3.21094C8.31342 3.21094 9.78862 4.68614 9.78862 6.49937C9.78862 8.31261 8.31342 9.78781 6.50018 9.78781ZM6.50018 4.20785C5.23662 4.20785 4.20865 5.23581 4.20865 6.49954C4.20865 7.7631 5.23662 8.79107 6.50018 8.79107C7.76374 8.79107 8.79188 7.7631 8.79188 6.49954C8.79188 5.23581 7.76391 4.20785 6.50018 4.20785Z"
-                                    fill="#011448" />
-                                <path
-                                    d="M11.0023 2.85469C11.0023 3.32758 10.619 3.71085 10.1461 3.71085C9.67325 3.71085 9.28998 3.32758 9.28998 2.85469C9.28998 2.38181 9.67325 1.99854 10.1461 1.99854C10.619 1.99854 11.0023 2.38181 11.0023 2.85469Z"
-                                    fill="#011448" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#youtube" aria-label="Corvexa on YouTube">
-                            <svg width="19" height="13" viewBox="0 0 19 13" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15.7894 0H2.78568C1.24717 0 0 1.24717 0 2.78539V10.2143C0 11.7528 1.24717 13 2.78568 13H15.7894C17.3279 13 18.5751 11.7528 18.5751 10.2143V2.78539C18.5754 1.24746 17.3282 0 15.7894 0ZM12.6357 6.20724L7.52023 9.577C7.47616 9.60648 7.41778 9.575 7.41778 9.52263V2.78195C7.41778 2.729 7.47645 2.69782 7.52023 2.72758L12.6357 6.09735C12.6758 6.1231 12.6758 6.18148 12.6357 6.20724Z"
-                                    fill="#011448" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#twitter" aria-label="Corvexa on X">
-                            <svg width="15" height="13" viewBox="0 0 15 13" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9.04505 5.36142L14.0578 0H12.1542L8.21988 4.2088L5.20673 0H0L5.27035 7.36228L0 13H1.90357L6.09615 8.51552L9.30639 13H14.5131L9.04505 5.36204V5.36142ZM2.6832 1.3784H4.4982L11.8305 11.6204H10.0155L2.6832 1.3784Z"
-                                    fill="#011448" />
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
     </main>
 
-    <div class="mobile-nav-backdrop" data-mobile-nav-backdrop hidden></div>
-    <aside class="mobile-nav" data-mobile-nav id="mobile-nav" aria-hidden="true" aria-labelledby="mobile-nav-title">
-        <div class="mobile-nav__header">
-            <span id="mobile-nav-title" class="mobile-nav__title"></span>
-            <button type="button" class="mobile-nav__close" data-mobile-nav-close aria-label="Close menu">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" />
-                </svg>
-            </button>
+    <!-- Section: Footer -->
+    <footer class="section--footer">
+        <div class="footer-logo"><img src="images/footer-logo.svg" alt=""></div>
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="section--footer__main">
+            <div class="section--footer__cta reveal">
+                <div class="section--footer__cta-text">
+                    <h2 class="section--footer__title">Ready to turn visitor intent into qualified leads?</h2>
+                    <p class="section--footer__subtitle">Join the forward-thinking sales teams already using Corvexa
+                        to win more deals.</p>
+                </div>
+                <div class="section--footer__buttons">
+                    <a class="btn btn--accent" href="#trial">Start free trial</a>
+                    <a class="btn btn--ghost-light" href="https://corvexa.ai/get-a-demo/">
+                        Book a demo
+
+                        <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                            viewBox="0 0 15 15" fill="none">
+                            <path
+                                d="M1 6.36396C0.447715 6.36396 0 6.81168 0 7.36396C0 7.91625 0.447715 8.36396 1 8.36396V7.36396V6.36396ZM14.7071 8.07107C15.0976 7.68054 15.0976 7.04738 14.7071 6.65685L8.34315 0.292892C7.95262 -0.0976319 7.31946 -0.0976319 6.92893 0.292892C6.53841 0.683417 6.53841 1.31658 6.92893 1.70711L12.5858 7.36396L6.92893 13.0208C6.53841 13.4113 6.53841 14.0445 6.92893 14.435C7.31946 14.8256 7.95262 14.8256 8.34315 14.435L14.7071 8.07107ZM1 7.36396V8.36396H14V7.36396V6.36396H1V7.36396Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="section--footer__rule">
+
+            <div class="section--footer__links reveal">
+                <div class="section--footer__brand">
+                    <a class="section--footer__logo" href="/" aria-label="Corvexa home">
+                        <img src="./images/logo-corvexa.svg" alt="Corvexa" width="185" height="35">
+                    </a>
+                    <p class="section--footer__tagline">Corvexa helps B2B websites turn visitor<br>intent into
+                        qualified leads.</p>
+                </div>
+
+                <details class="section--footer__col" data-footer-col>
+                    <summary class="section--footer__col-title">
+                        Product
+                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </summary>
+                    <ul class="section--footer__col-list">
+                        <li><a href="#how-it-works">How it works</a></li>
+                        <li><a href="#integrations">Integrations</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#trial">Start free trial</a></li>
+                    </ul>
+                </details>
+
+                <details class="section--footer__col" data-footer-col>
+                    <summary class="section--footer__col-title">
+                        Use Cases
+                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </summary>
+                    <!-- PLACEHOLDER: Figma uses "Case Studies 1" through "Case Studies 8" as link labels — replace with real case-study titles -->
+                    <ul class="section--footer__col-list">
+                        <li><a href="#case-1">Case Studies 1</a></li>
+                        <li><a href="#case-2">Case Studies 2</a></li>
+                        <li><a href="#case-3">Case Studies 3</a></li>
+                        <li><a href="#case-4">Case Studies 4</a></li>
+                        <li><a href="#case-5">Case Studies 5</a></li>
+                        <li><a href="#case-6">Case Studies 6</a></li>
+                        <li><a href="#case-7">Case Studies 7</a></li>
+                        <li><a href="#case-8">Case Studies 8</a></li>
+                    </ul>
+                </details>
+
+                <details class="section--footer__col" data-footer-col>
+                    <summary class="section--footer__col-title">
+                        Company
+                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </summary>
+                    <ul class="section--footer__col-list">
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </details>
+
+                <details class="section--footer__col" data-footer-col>
+                    <summary class="section--footer__col-title">
+                        Legal
+                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </summary>
+                    <ul class="section--footer__col-list">
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#cookies">Cookie Policy</a></li>
+                    </ul>
+                </details>
+            </div>
         </div>
-        <nav aria-label="Mobile">
-            <ul class="mobile-nav__list">
-                <li><a href="#how-it-works">How it works</a></li>
-                <li><a href="#integrations">Integrations</a></li>
-                <li><a href="./pricing.html">Pricing</a></li>
+
+        <div class="section--footer__bar">
+            <p class="section--footer__copy">Copyright &copy; 2025 All Rights Reserved.</p>
+            <ul class="section--footer__social">
                 <li>
-                    <details>
-                        <summary>
-                            Solutions
-                            <svg viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
-                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </summary>
-                        <ul class="mobile-nav__dropdown-menu">
-                            <li><a href="./solutions.html">AI Agents</a></li>
-                            <li><a href="./solutions.html">Sales Automation</a></li>
-                            <li><a href="./solutions.html">Customer Support</a></li>
-                        </ul>
-                    </details>
+                    <a href="#linkedin" aria-label="Corvexa on LinkedIn">
+                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.08787 13V4.22847H0.172378V13H3.08787ZM1.63011 3.03087C2.6468 3.03087 3.27961 2.35731 3.27961 1.51556C3.26066 0.654865 2.64681 -9.53674e-07 1.6494 -9.53674e-07C0.652096 -9.53674e-07 3.05176e-05 0.654865 3.05176e-05 1.51556C3.05176e-05 2.35731 0.632701 3.03087 1.61111 3.03087H1.63011Z"
+                                fill="#011448" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.70148 13H7.61694V8.10161C7.61694 7.83945 7.63589 7.57756 7.71287 7.39016C7.92364 6.86637 8.40336 6.32389 9.20877 6.32389C10.2637 6.32389 10.6858 7.12826 10.6858 8.30744V13H13.601V7.97053C13.601 5.27631 12.1626 4.02264 10.2445 4.02264C8.67166 4.02264 7.98118 4.90177 7.59755 5.50057H7.61702V4.22847H4.70156C4.73982 5.05153 4.70148 13 4.70148 13Z"
+                                fill="#011448" />
+                        </svg>
+                    </a>
                 </li>
                 <li>
-                    <details>
-                        <summary>
-                            Resource
-                            <svg viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
-                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </summary>
-                        <ul class="mobile-nav__dropdown-menu">
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./documentation.html">Documentation</a></li>
-                            <li><a href="./help.html">Help Center</a></li>
-                        </ul>
-                    </details>
+                    <a href="#instagram" aria-label="Corvexa on Instagram">
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.01995 13H3.98005C1.78539 13 0 11.2146 0 9.01995V3.98005C0 1.78539 1.78539 0 3.98005 0H9.01995C11.2146 0 13 1.78539 13 3.98005V9.01995C13 11.2144 11.2146 13 9.01995 13ZM3.98005 0.973452C2.32224 0.973452 0.973452 2.32224 0.973452 3.98005V9.01995C0.973452 10.6778 2.32224 12.0265 3.98005 12.0265H9.01995C10.6779 12.0265 12.0267 10.6778 12.0267 9.01995V3.98005C12.0267 2.32224 10.6779 0.973452 9.01995 0.973452H3.98005Z"
+                                fill="#011448" />
+                            <path
+                                d="M6.50018 9.78781C4.68694 9.78781 3.21191 8.31261 3.21191 6.49937C3.21191 4.68614 4.68694 3.21094 6.50018 3.21094C8.31342 3.21094 9.78862 4.68614 9.78862 6.49937C9.78862 8.31261 8.31342 9.78781 6.50018 9.78781ZM6.50018 4.20785C5.23662 4.20785 4.20865 5.23581 4.20865 6.49954C4.20865 7.7631 5.23662 8.79107 6.50018 8.79107C7.76374 8.79107 8.79188 7.7631 8.79188 6.49954C8.79188 5.23581 7.76391 4.20785 6.50018 4.20785Z"
+                                fill="#011448" />
+                            <path
+                                d="M11.0023 2.85469C11.0023 3.32758 10.619 3.71085 10.1461 3.71085C9.67325 3.71085 9.28998 3.32758 9.28998 2.85469C9.28998 2.38181 9.67325 1.99854 10.1461 1.99854C10.619 1.99854 11.0023 2.38181 11.0023 2.85469Z"
+                                fill="#011448" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#youtube" aria-label="Corvexa on YouTube">
+                        <svg width="19" height="13" viewBox="0 0 19 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.7894 0H2.78568C1.24717 0 0 1.24717 0 2.78539V10.2143C0 11.7528 1.24717 13 2.78568 13H15.7894C17.3279 13 18.5751 11.7528 18.5751 10.2143V2.78539C18.5754 1.24746 17.3282 0 15.7894 0ZM12.6357 6.20724L7.52023 9.577C7.47616 9.60648 7.41778 9.575 7.41778 9.52263V2.78195C7.41778 2.729 7.47645 2.69782 7.52023 2.72758L12.6357 6.09735C12.6758 6.1231 12.6758 6.18148 12.6357 6.20724Z"
+                                fill="#011448" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#twitter" aria-label="Corvexa on X">
+                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.04505 5.36142L14.0578 0H12.1542L8.21988 4.2088L5.20673 0H0L5.27035 7.36228L0 13H1.90357L6.09615 8.51552L9.30639 13H14.5131L9.04505 5.36204V5.36142ZM2.6832 1.3784H4.4982L11.8305 11.6204H10.0155L2.6832 1.3784Z"
+                                fill="#011448" />
+                        </svg>
+                    </a>
                 </li>
             </ul>
-        </nav>
-        <div class="mobile-nav__actions">
-            <a class="btn btn--primary mobile-nav__cta" href="https://corvexa.ai/get-a-demo/">Book a demo</a>
-            <a class="btn btn--secondary mobile-nav__cta" href="#login">
-                Log in
-                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"
-                    fill="none">
-                    <path
-                        d="M1 6.36396C0.447715 6.36396 0 6.81168 0 7.36396C0 7.91625 0.447715 8.36396 1 8.36396V7.36396V6.36396ZM14.7071 8.07107C15.0976 7.68054 15.0976 7.04738 14.7071 6.65685L8.34315 0.292892C7.95262 -0.0976319 7.31946 -0.0976319 6.92893 0.292892C6.53841 0.683417 6.53841 1.31658 6.92893 1.70711L12.5858 7.36396L6.92893 13.0208C6.53841 13.4113 6.53841 14.0445 6.92893 14.435C7.31946 14.8256 7.95262 14.8256 8.34315 14.435L14.7071 8.07107ZM1 7.36396V8.36396H14V7.36396V6.36396H1V7.36396Z"
-                        fill="currentColor" />
-                </svg>
-            </a>
         </div>
-    </aside>
+    </footer>
 
     <script src="js/script.js"></script>
 

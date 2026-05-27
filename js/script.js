@@ -109,17 +109,30 @@
 (function () {
     // start :: pricing
     const toggleBtn = document.querySelector('.section--pricing__toggle-switch');
-    toggleBtn.addEventListener('click', () => {
-        toggleBtn.classList.toggle('is-yearly');
-        const showYearly = toggleBtn.classList.contains('is-yearly');
-        document.querySelectorAll('.section--pricing__card-price').forEach(card => {
-            card.querySelector('.section--pricing__price-wrapper--monthly').style.display =
-                showYearly ? 'none' : 'inline-flex';
-            card.querySelector('.section--pricing__price-wrapper--yearly').style.display =
-                showYearly ? 'inline-flex' : 'none';
-        });
+    if (toggleBtn) {
+        const labels = toggleBtn.closest('.section--pricing__toggle').querySelectorAll('.section--pricing__toggle-label');
+        toggleBtn.addEventListener('click', () => {
+            toggleBtn.classList.toggle('is-yearly');
+            const showYearly = toggleBtn.classList.contains('is-yearly');
+            
+            if (labels.length >= 2) {
+                if (showYearly) {
+                    labels[0].classList.add('section--pricing__toggle-label--inactive');
+                    labels[1].classList.remove('section--pricing__toggle-label--inactive');
+                } else {
+                    labels[0].classList.remove('section--pricing__toggle-label--inactive');
+                    labels[1].classList.add('section--pricing__toggle-label--inactive');
+                }
+            }
 
-    });
+            document.querySelectorAll('.section--pricing__card-price').forEach(card => {
+                card.querySelector('.section--pricing__price-wrapper--monthly').style.display =
+                    showYearly ? 'none' : 'inline-flex';
+                card.querySelector('.section--pricing__price-wrapper--yearly').style.display =
+                    showYearly ? 'inline-flex' : 'none';
+            });
+        });
+    }
     // end :: pricing
 })();
 
@@ -391,58 +404,132 @@
 })();
 
 // Promise Stacking Cards Scroll Animation
+(function() {
+    var section = document.querySelector('.section--about-promise');
+    var stack = document.querySelector('.section--about-promise__stack');
+    var cards = document.querySelectorAll('.section--about-promise__main');
+
+    if (!section || !stack || !cards.length) return;
+
+    let targetProgress = 0;
+    let currentProgress = 0;
+    const ease = 0.1; // Smooth damping lerp factor
+    let isAnimating = false;
+
+    // Base front and back colors
+    const cFront = [11, 109, 255]; // rgb(11, 109, 255)
+    const cBack = [194, 219, 255];  // rgb(194, 219, 255)
+
+    function renderPromiseCards(progress) {
+        const N = cards.length;
+        if (N <= 1) {
+            cards.forEach(c => { c.style.transform = c.style.backgroundColor = c.style.zIndex = c.style.opacity = ''; });
+            return;
+        }
+
+        const s = Math.min(N - 2, Math.floor(progress * (N - 1)));
+        const segProgress = (progress * (N - 1)) - s;
+
+        cards.forEach((card, idx) => {
+            const posStart = (idx - s + N) % N;
+            const posEnd = (idx - (s + 1) + N) % N;
+
+            // Linear interpolation of stack position index
+            const pos = posStart + segProgress * (posEnd - posStart);
+            const translateY = pos * (70 / (N - 1));
+            const scale = 1.0 - pos * (0.12 / (N - 1));
+
+            // Direct color interpolation based on position
+            const f = pos / (N - 1);
+            const r = Math.round(cFront[0] + f * (cBack[0] - cFront[0]));
+            const g = Math.round(cFront[1] + f * (cBack[1] - cFront[1]));
+            const b = Math.round(cFront[2] + f * (cBack[2] - cFront[2]));
+
+            card.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`;
+            card.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            card.style.zIndex = segProgress < 0.5 ? (N - posStart) : (N - posEnd);
+            card.style.opacity = '1.0';
+        });
+    }
+
+    function animate() {
+        if (window.innerWidth <= 1024) {
+            isAnimating = false;
+            return;
+        }
+
+        const diff = targetProgress - currentProgress;
+
+        if (Math.abs(diff) < 0.0001) {
+            currentProgress = targetProgress;
+            isAnimating = false;
+        } else {
+            currentProgress += diff * ease;
+            requestAnimationFrame(animate);
+        }
+
+        renderPromiseCards(currentProgress);
+    }
+
+    function updatePromiseScales() {
+        if (window.innerWidth <= 1024) {
+            targetProgress = 0;
+            currentProgress = 0;
+            isAnimating = false;
+            cards.forEach(card => {
+                card.style.transform = '';
+                card.style.opacity = '';
+                card.style.zIndex = '';
+            });
+            return;
+        }
+
+        const sectionRect = section.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        // Total scrollable height of the Promise section
+        const scrollDistance = sectionRect.height - viewportHeight;
+
+        // Progress goes from 0 to 1
+        let progress = -sectionRect.top / (scrollDistance || 1);
+        targetProgress = Math.max(0, Math.min(1, progress));
+
+        if (!isAnimating) {
+            isAnimating = true;
+            requestAnimationFrame(animate);
+        }
+    }
+
+    // Initial call
+    updatePromiseScales();
+
+    window.addEventListener('scroll', updatePromiseScales, { passive: true });
+    window.addEventListener('resize', updatePromiseScales, { passive: true });
+})();
+
+// Case Studies Tab Filter
 (function () {
-    var promiseCards = document.querySelectorAll('.section--about-promise__main');
-    if (promiseCards.length > 0) {
-        var updateCards = function () {
-            promiseCards.forEach(function (card, index) {
-                card.style.top = (120 + index * 30) + 'px';
-                if (index === promiseCards.length - 1) return;
-
-                var nextCard = promiseCards[index + 1];
-                var nextRect = nextCard.getBoundingClientRect();
-                var stickyTop = 120 + index * 30;
-                var startY = stickyTop + card.offsetHeight;
-                var endY = 120 + (index + 1) * 30;
-
-                var percentage = (startY - nextRect.top) / (startY - endY);
-                if (percentage < 0) percentage = 0;
-                if (percentage > 1) percentage = 1;
-
-                var toScale = Math.max(0.6, 1 - (promiseCards.length - 1 - index) * 0.05);
-                var currentScale = 1 - (1 - toScale) * percentage;
-                var maxRotateZ = (index % 2 === 0 ? -4 : 4);
-                var currentRotateZ = percentage * maxRotateZ;
-                var currentRotateX = percentage * 12;
-                var currentBrightness = 1 - (1 - 0.65) * percentage;
-                var currentBlur = percentage * 3;
-                var currentOpacity = 1 - (1 - 0.5) * percentage;
-
-                card.style.transform = 'perspective(1200px) scale(' + currentScale + ') rotateX(' + currentRotateX + 'deg) rotateZ(' + currentRotateZ + 'deg)';
-                card.style.filter = 'brightness(' + currentBrightness + ') blur(' + currentBlur + 'px)';
-                card.style.opacity = currentOpacity;
-                var bgMiddle = document.querySelector('.section--about-promise__bg-card--middle');
-                var bgBack = document.querySelector('.section--about-promise__bg-card--back');
-
-                if (index === 0 && bgMiddle) {
-                    bgMiddle.style.opacity = 1 - percentage;
-                }
-                if (index === 1 && bgBack) {
-                    bgBack.style.opacity = 1 - percentage;
+    var tabs = document.querySelectorAll('.section--case-studies__tab');
+    var cards = document.querySelectorAll('.section--case-studies__card');
+    var empty = document.querySelector('.section--case-studies__empty');
+    var grid = document.querySelector('.section--case-studies__grid');
+    if (tabs.length > 0) {
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                tabs.forEach(function(t) { t.classList.remove('active'); });
+                tab.classList.add('active');
+                var f = tab.dataset.filter, count = 0;
+                cards.forEach(function(c) {
+                    var show = f === 'all' || c.dataset.category === f;
+                    c.style.display = show ? '' : 'none';
+                    count += show ? 1 : 0;
+                });
+                if (empty) { 
+                    empty.style.display = count ? 'none' : 'flex'; 
+                    if (grid) grid.style.display = count ? '' : 'none'; 
                 }
             });
-        };
-
-        window.addEventListener('scroll', function () {
-            requestAnimationFrame(updateCards);
-        }, { passive: true });
-
-        window.addEventListener('resize', function () {
-            requestAnimationFrame(updateCards);
-        }, { passive: true });
-
-        // Initial call
-        updateCards();
+        });
     }
 })();
 
