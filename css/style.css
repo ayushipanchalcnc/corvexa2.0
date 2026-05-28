@@ -602,7 +602,7 @@ section[id] {
 /* Back to Top Button */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
+  bottom: 60px;
   right: 30px;
   width: 50px;
   height: 50px;
@@ -4617,7 +4617,7 @@ section[id] {
 
 .section--faq__summary:focus-visible {
   outline-color: var(--color-blue);
-  box-shadow: 0 0 0 4px rgba(11, 109, 255, 0.15);
+  box-shadow: none;
 }
 
 @keyframes faq-fade-in {
@@ -4640,9 +4640,9 @@ section[id] {
 }
 
 .section--faq__summary:focus-visible {
-  outline: 2px solid var(--color-focus-ring);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
+  outline: none;
+  outline-offset: 0px;
+  border-radius: 0px;
 }
 
 @media (hover: hover) {
@@ -5360,8 +5360,11 @@ section[id] {
   font-weight: 700;
 }
 
-.section--pricing-plans__toggle.is-yearly .section--pricing-plans__toggle-save {
+.section--pricing-plans__toggle-save {
   color: var(--color-light-green);
+}
+
+.section--pricing-plans__toggle.is-yearly .section--pricing-plans__toggle-save {
   font-weight: 700;
   opacity: 1;
 }
@@ -5370,6 +5373,7 @@ section[id] {
 .section--pricing-plans__toggle-yearly.section--pricing__toggle-label--inactive
   .section--pricing-plans__toggle-save {
   font-weight: 400;
+  opacity: 0.7;
 }
 
 .section--pricing-plans__toggle-switch {

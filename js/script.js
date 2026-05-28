@@ -401,9 +401,21 @@
           var activeIndex = dots.findIndex((d) =>
             d.classList.contains("section--integrations__dot--active"),
           );
-          var nextIndex = (activeIndex + 1) % dots.length;
-          if (dots[nextIndex]) {
-            dots[nextIndex].click();
+
+          if (activeIndex >= dots.length - 1) {
+            integrationsGrid.scrollTo({ left: 0, behavior: "instant" });
+            dots.forEach(function (dot, i) {
+              if (i === 0) {
+                dot.classList.add("section--integrations__dot--active");
+              } else {
+                dot.classList.remove("section--integrations__dot--active");
+              }
+            });
+          } else {
+            var nextIndex = activeIndex + 1;
+            if (dots[nextIndex]) {
+              dots[nextIndex].click();
+            }
           }
         }
       }, 3000);
@@ -809,7 +821,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const parent = target.closest(".section--pricing-plans__toggle");
     if (!parent) return;
 
-    const toggle = parent.querySelector(".section--pricing-plans__toggle-switch");
+    const toggle = parent.querySelector(
+      ".section--pricing-plans__toggle-switch",
+    );
     if (!toggle) return;
 
     let isYearly;
