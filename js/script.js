@@ -362,13 +362,26 @@
     });
   }
 
-  // Integrations Mobile Pagination and Auto-scroll
+  // Integrations Mobile Pagination and Auto-scroll (infinite loop)
   var integrationsGrid = document.querySelector(".section--integrations__grid");
   var paginationContainer = document.querySelector(
     ".section--integrations__pagination",
   );
   if (integrationsGrid && paginationContainer && integrationCards.length > 0) {
-    // Generate dots
+    var realCardCount = integrationCards.length;
+    var isMobileLoop = window.innerWidth <= 1024;
+
+    // Clone ALL cards and append them for seamless forward-only loop
+    if (isMobileLoop) {
+      integrationCards.forEach(function (card) {
+        var clone = card.cloneNode(true);
+        clone.setAttribute("data-clone", "true");
+        clone.classList.remove("section--integrations__card--featured");
+        integrationsGrid.appendChild(clone);
+      });
+    }
+
+    // Generate dots (only for real cards)
     integrationCards.forEach(function (_, index) {
       var dot = document.createElement("div");
       dot.className =
@@ -392,56 +405,71 @@
     var dots = Array.from(
       paginationContainer.querySelectorAll(".section--integrations__dot"),
     );
+
+    function updateDots(activeIdx) {
+      dots.forEach(function (dot, i) {
+        if (i === activeIdx) {
+          dot.classList.add("section--integrations__dot--active");
+        } else {
+          dot.classList.remove("section--integrations__dot--active");
+        }
+      });
+    }
+
     var integrationsAutoScroll;
 
     function startIntegrationsAutoScroll() {
       clearInterval(integrationsAutoScroll);
       integrationsAutoScroll = setInterval(function () {
         if (window.innerWidth <= 1024) {
-          var activeIndex = dots.findIndex((d) =>
-            d.classList.contains("section--integrations__dot--active"),
-          );
-
-          if (activeIndex >= dots.length - 1) {
-            integrationsGrid.scrollTo({ left: 0, behavior: "instant" });
-            dots.forEach(function (dot, i) {
-              if (i === 0) {
-                dot.classList.add("section--integrations__dot--active");
-              } else {
-                dot.classList.remove("section--integrations__dot--active");
-              }
-            });
-          } else {
-            var nextIndex = activeIndex + 1;
-            if (dots[nextIndex]) {
-              dots[nextIndex].click();
-            }
-          }
+          // Always scroll forward by one card width
+          var cardWidth = integrationsGrid.clientWidth;
+          integrationsGrid.scrollTo({
+            left: integrationsGrid.scrollLeft + cardWidth,
+            behavior: "smooth",
+          });
         }
       }, 3000);
     }
 
     startIntegrationsAutoScroll();
 
-    // Update dots on scroll
+    // Reposition when landing on a cloned card
+    var scrollEndTimer;
+    var isRepositioning = false;
+
     integrationsGrid.addEventListener(
       "scroll",
       function () {
-        var scrollLeft = integrationsGrid.scrollLeft;
-        var cardWidth = integrationsGrid.clientWidth;
-        var closestIndex = Math.round(scrollLeft / cardWidth);
-        closestIndex = Math.max(0, Math.min(closestIndex, dots.length - 1));
+        if (isRepositioning) return;
 
-        dots.forEach(function (dot, i) {
-          if (i === closestIndex) {
-            dot.classList.add("section--integrations__dot--active");
+        clearTimeout(scrollEndTimer);
+        scrollEndTimer = setTimeout(function () {
+          var scrollLeft = integrationsGrid.scrollLeft;
+          var cardWidth = integrationsGrid.clientWidth;
+          var currentIndex = Math.round(scrollLeft / cardWidth);
+
+          if (isMobileLoop && currentIndex >= realCardCount) {
+            // Landed on a cloned card — silently jump to the matching real card
+            var realIndex = currentIndex - realCardCount;
+            isRepositioning = true;
+            integrationsGrid.scrollTo({
+              left: realIndex * cardWidth,
+              behavior: "instant",
+            });
+            updateDots(realIndex);
+            requestAnimationFrame(function () {
+              isRepositioning = false;
+            });
           } else {
-            dot.classList.remove("section--integrations__dot--active");
+            // On a real card — just update dots
+            var dotIndex = isMobileLoop ? currentIndex : currentIndex;
+            dotIndex = Math.max(0, Math.min(dotIndex, dots.length - 1));
+            updateDots(dotIndex);
           }
-        });
 
-        // Reset the auto-scroll timer if user manually interacts or it auto-scrolls
-        startIntegrationsAutoScroll();
+          startIntegrationsAutoScroll();
+        }, 80);
       },
       { passive: true },
     );

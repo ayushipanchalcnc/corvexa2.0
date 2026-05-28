@@ -3278,6 +3278,11 @@ section[id] {
   width: 100%;
 }
 
+/* Clone cards are hidden by default, shown only in mobile carousel (<=1024px) */
+.section--integrations__card[data-clone] {
+  display: none;
+}
+
 .section--integrations__card {
   background: var(--color-light-blue);
   border: 1px solid transparent;
@@ -3551,6 +3556,11 @@ section[id] {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  /* Show clone cards only in mobile carousel */
+  .section--integrations__card[data-clone] {
+    display: flex;
   }
 
   .section--integrations__grid::-webkit-scrollbar {
