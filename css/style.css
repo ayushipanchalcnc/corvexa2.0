@@ -7949,6 +7949,7 @@ section[id] {
   font-weight: 700;
   color: var(--color-dark-blue);
   transition: all 0.3s ease-in-out;
+  width: max-content;
 }
 
 .section--contact-info__card-detail:hover {
@@ -8051,8 +8052,7 @@ section[id] {
 }
 
 .section--contact-form__input:focus-visible {
-  outline: 2px solid var(--color-blue);
-  outline-offset: 2px;
+  outline: none;
   border-color: var(--color-blue);
 }
 
@@ -8297,13 +8297,13 @@ section[id] {
     margin-right: auto;
   }
 
-  .section--contact-hero__title {
+  .section--contact-hero__title,
+  .section--contact-cta__title {
     font-size: clamp(36px, 3.2vw, 48px);
     line-height: 1.3;
   }
 
-  .section--contact-info__title,
-  .section--contact-cta__title {
+  .section--contact-info__title {
     font-size: clamp(28px, 2.4vw, 36px);
     line-height: 1.3;
   }
@@ -8396,6 +8396,7 @@ section[id] {
     padding-bottom: 60px;
   }
 
+  .section--contact-hero__title,
   .section--contact-hero__title {
     font-size: 28px;
     line-height: 1.2;
@@ -8424,6 +8425,10 @@ section[id] {
 
   .section--contact-form__grid {
     grid-template-columns: 1fr;
+  }
+
+  .section--contact-form__header {
+    margin-bottom: 16px;
   }
 
   .section--contact-form__label,
