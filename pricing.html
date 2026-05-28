@@ -77,11 +77,11 @@
             <div class="section--pricing-plans__container">
                 <header class="section--pricing-plans__header reveal">
                     <h2 class="section--pricing-plans__heading">Pick your plan</h2>
-                    <div class="section--pricing-plans__toggle section--pricing__toggle" role="group" aria-label="Billing period">
+                    <div class="section--pricing-plans__toggle section--pricing__toggle is-yearly" role="group" aria-label="Billing period">
                         <span class="section--pricing-plans__toggle-monthly section--pricing__toggle-label">Monthly</span>
-                        <button type="button" class="section--pricing__toggle-switch is-yearly"
+                        <button type="button" class="section--pricing__toggle-switch section--pricing-plans__toggle-switch is-yearly"
                             aria-label="Switch billing period" aria-pressed="true">
-                            <span class="section--pricing__toggle-thumb" aria-hidden="true"></span>
+                            <span class="section--pricing__toggle-thumb section--pricing-plans__toggle-thumb" aria-hidden="true"></span>
                         </button>
                         <span class="section--pricing-plans__toggle-yearly section--pricing__toggle-label">
                             Yearly
@@ -98,24 +98,24 @@
                         </div>
                         <div class="section--pricing__card-price">
                             <p class="section--pricing__price-row">
-    
+
                                 <!-- MONTHLY -->
                                 <span class="section--pricing__price-wrapper section--pricing__price-wrapper--monthly">
-    
+
                                     <span class="section--pricing__price">$99</span>
                                     <span class="section--pricing__price-original">$149</span>
                                     <span class="section--pricing__price-period">/month</span>
-    
+
                                 </span>
-    
+
                                 <!-- YEARLY -->
                                 <span class="section--pricing__price-wrapper section--pricing__price-wrapper--yearly">
-    
+
                                     <span class="section--pricing__price">$499</span>
                                     <span class="section--pricing__price-period">/year</span>
-    
+
                                 </span>
-    
+
                             </p>
                             <span class="section--pricing__card-badge">Up to 500 conversations / month</span>
                         </div>
@@ -144,19 +144,19 @@
                             <p class="section--pricing__price-row">
                                 <!-- MONTHLY -->
                                 <span class="section--pricing__price-wrapper section--pricing__price-wrapper--monthly">
-    
+
                                     <span class="section--pricing__price">$299</span>
                                     <span class="section--pricing__price-original">$499</span>
                                     <span class="section--pricing__price-period">/month</span>
-    
+
                                 </span>
-    
+
                                 <!-- YEARLY -->
                                 <span class="section--pricing__price-wrapper section--pricing__price-wrapper--yearly">
-    
+
                                     <span class="section--pricing__price">$999</span>
                                     <span class="section--pricing__price-period">/year</span>
-    
+
                                 </span>
                             </p>
                             <span class="section--pricing__card-badge">Up to 2,000 conversations / month</span>
@@ -212,7 +212,7 @@
                 <!-- Header row: billing toggle + 3 plan headers -->
                 <div class="section--pricing-comparison__billing">
                     <p class="section--pricing-comparison__billing-title">Select preferred billing cycle</p>
-                    <div class="section--pricing-plans__toggle" role="group" aria-label="Billing period">
+                    <div class="section--pricing-plans__toggle is-yearly" role="group" aria-label="Billing period">
                         <span class="section--pricing-plans__toggle-monthly">Monthly</span>
                         <button type="button" class="section--pricing-plans__toggle-switch is-yearly" aria-label="Switch billing period" aria-pressed="true">
                             <span class="section--pricing-plans__toggle-thumb" aria-hidden="true"></span>
@@ -561,8 +561,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- FAQ -->
         <section class="section--faq" id="faq">
             <div class="section--faq__body">
                 <header class="section--faq__intro reveal is-visible">
