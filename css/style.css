@@ -9227,10 +9227,18 @@ section[id] {
   font-weight: 700;
   color: var(--color-dark-blue);
   margin-bottom: var(--space-8);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .section--case-studies__card-description {
   color: var(--color-dark-blue);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .section--case-studies__empty {
