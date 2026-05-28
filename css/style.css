@@ -9639,6 +9639,10 @@ section[id] {
   .cs-split {
     gap: 50px;
   }
+  .cs-post__body p,
+  .cs-post__author {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -9696,6 +9700,10 @@ section[id] {
   .cs-tried__row2 {
     grid-template-columns: 1fr;
     flex-direction: column;
+  }
+  .cs-post__body p,
+  .cs-post__author {
+    font-size: 16px;
   }
 }
 
