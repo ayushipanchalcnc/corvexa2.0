@@ -7581,15 +7581,13 @@ section[id] {
 @media (min-width: 1025px) {
   .section--about-promise {
     position: relative;
-    height: 220vh;
-    /* Long scroll stage track */
+    padding-bottom: var(--space-32);
   }
 
   .section--about-promise__container {
     position: sticky;
     top: 150px;
-    height: 480px;
-    /* Keep container fixed during track scroll */
+    height: 400px;
   }
 
   .section--about-promise__header {
@@ -7706,6 +7704,11 @@ section[id] {
   .section--about-promise {
     padding-top: var(--space-64);
     padding-bottom: var(--space-64);
+  }
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .section--about-promise {
+    padding-bottom: var(--space-32);
   }
 }
 @media (max-width: 1024px) {

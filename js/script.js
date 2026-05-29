@@ -495,15 +495,18 @@
 // Promise Stacking Cards Scroll Animation
 (function () {
   var section = document.querySelector(".section--about-promise");
+  var container = document.querySelector(".section--about-promise__container");
   var stack = document.querySelector(".section--about-promise__stack");
   var cards = document.querySelectorAll(".section--about-promise__main");
 
-  if (!section || !stack || !cards.length) return;
+  if (!section || !container || !stack || !cards.length) return;
 
   let targetProgress = 0;
   let currentProgress = 0;
   const ease = 0.1; // Smooth damping lerp factor
   let isAnimating = false;
+  let lastTouchY = 0;
+  const progressPerPixel = 1 / 1800;
 
   // Base front and back colors
   const cFront = [11, 109, 255]; // rgb(11, 109, 255)
@@ -566,6 +569,77 @@
     renderPromiseCards(currentProgress);
   }
 
+  function getPromiseScrollState() {
+    const sectionRect = section.getBoundingClientRect();
+    const sectionStyles = window.getComputedStyle(section);
+    const containerStyles = window.getComputedStyle(container);
+    const stickyTop = parseFloat(containerStyles.top) || 0;
+    const paddingTop = parseFloat(sectionStyles.paddingTop) || 0;
+    const stickyStart = stickyTop - paddingTop;
+    const stickyEnd = stickyTop + stack.offsetHeight;
+
+    return {
+      sectionRect,
+      stickyStart,
+      stickyEnd,
+      isActive:
+        sectionRect.top <= stickyStart && sectionRect.bottom >= stickyEnd,
+      isBefore: sectionRect.top > stickyStart,
+      isAfter: sectionRect.bottom < stickyEnd,
+    };
+  }
+
+  function setPromiseProgress(progress) {
+    const nextProgress = Math.max(0, Math.min(1, progress));
+
+    if (Math.abs(targetProgress - nextProgress) < 0.0001) return;
+
+    targetProgress = nextProgress;
+
+    if (!isAnimating) {
+      isAnimating = true;
+      requestAnimationFrame(animate);
+    }
+  }
+
+  function handlePromiseScrollDelta(deltaY, event) {
+    if (window.innerWidth <= 1024 || Math.abs(deltaY) < 1) return;
+
+    const state = getPromiseScrollState();
+    const isMovingDown = deltaY > 0;
+    const canAdvance = isMovingDown && targetProgress < 1;
+    const canReverse = !isMovingDown && targetProgress > 0;
+
+    if (
+      canAdvance &&
+      state.isBefore &&
+      state.sectionRect.top - deltaY <= state.stickyStart
+    ) {
+      event.preventDefault();
+      const alignDelta = Math.max(0, state.sectionRect.top - state.stickyStart);
+      window.scrollBy(0, alignDelta);
+      setPromiseProgress(targetProgress + (deltaY - alignDelta) * progressPerPixel);
+      return;
+    }
+
+    if (
+      canReverse &&
+      state.isAfter &&
+      state.sectionRect.bottom - deltaY >= state.stickyEnd
+    ) {
+      event.preventDefault();
+      const alignDelta = Math.min(0, state.sectionRect.bottom - state.stickyEnd);
+      window.scrollBy(0, alignDelta);
+      setPromiseProgress(targetProgress + (deltaY - alignDelta) * progressPerPixel);
+      return;
+    }
+
+    if (state.isActive && (canAdvance || canReverse)) {
+      event.preventDefault();
+      setPromiseProgress(targetProgress + deltaY * progressPerPixel);
+    }
+  }
+
   function updatePromiseScales() {
     if (window.innerWidth <= 1024) {
       targetProgress = 0;
@@ -579,27 +653,37 @@
       return;
     }
 
-    const sectionRect = section.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
+    const state = getPromiseScrollState();
 
-    // Total scrollable height of the Promise section
-    const scrollDistance = sectionRect.height - viewportHeight;
-
-    // Progress goes from 0 to 1
-    let progress = -sectionRect.top / (scrollDistance || 1);
-    targetProgress = Math.max(0, Math.min(1, progress));
-
-    if (!isAnimating) {
-      isAnimating = true;
-      requestAnimationFrame(animate);
+    if (state.isBefore) {
+      setPromiseProgress(0);
+    } else if (state.isAfter) {
+      setPromiseProgress(1);
     }
   }
 
   // Initial call
+  if (window.innerWidth > 1024) {
+    renderPromiseCards(0);
+  }
   updatePromiseScales();
 
   window.addEventListener("scroll", updatePromiseScales, { passive: true });
   window.addEventListener("resize", updatePromiseScales, { passive: true });
+  window.addEventListener("wheel", function (event) {
+    handlePromiseScrollDelta(event.deltaY, event);
+  }, { passive: false });
+  window.addEventListener("touchstart", function (event) {
+    if (!event.touches.length) return;
+    lastTouchY = event.touches[0].clientY;
+  }, { passive: true });
+  window.addEventListener("touchmove", function (event) {
+    if (!event.touches.length) return;
+    const touchY = event.touches[0].clientY;
+    const deltaY = lastTouchY - touchY;
+    handlePromiseScrollDelta(deltaY, event);
+    lastTouchY = touchY;
+  }, { passive: false });
 })();
 
 // Case Studies Tab Filter
