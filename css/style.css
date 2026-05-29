@@ -5209,6 +5209,7 @@ section[id] {
   .section--pricing {
     padding-top: 60px;
     padding-bottom: 60px;
+    gap: var(--space-16);
   }
 
   .section--pricing__card {
@@ -9322,7 +9323,7 @@ section[id] {
   .section--case-studies {
     gap: var(--space-24);
     padding-top: var(--space-16);
-    padding-bottom: var(--space-32);
+    padding-bottom: var(--space-64);
   }
 
   .section--case-studies__grid {
