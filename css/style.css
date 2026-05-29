@@ -6302,6 +6302,7 @@ section[id] {
 
   .section--pricing-plans__card {
     max-width: 100%;
+    min-height: auto;
   }
 
   .section--pricing-comparison__plan-name,
