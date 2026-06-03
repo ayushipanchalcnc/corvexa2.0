@@ -6,11 +6,6 @@
     <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark">
     <title>Corvexa - Usage Threshold Exceeded</title>
-    <!--[if mso]>
-    <style type="text/css">
-      body, table, td, a { font-family: Arial, Helvetica, sans-serif !important; }
-    </style>
-    <![endif]-->
 </head>
 <body style="margin: 0; padding: 0; background-color: #f9faff; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
     <center style="width: 100%; table-layout: fixed; background-color: #f9faff;">
@@ -18,7 +13,7 @@
             
             <!-- Header -->
             <tr>
-                <td style="padding: 13px 32px; border-bottom: 1px solid rgba(11, 109, 255, 0.20); background: #F9FAFF; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                <td style="padding: 13px 20px; border-bottom: 1px solid rgba(11, 109, 255, 0.20); background: #F9FAFF; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                     <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
                         <tr>
                             <td align="left" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
@@ -35,7 +30,7 @@
             
             <!-- Body Content -->
             <tr>
-                <td style="padding: 20px 30px 30px 30px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                <td style="padding: 20px 20px 30px 20px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 
                     <div style="background-color: #F04444; background-image: url('../images/background-image.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 40px 30px; margin-bottom: 30px; border-radius: 4px; text-align: left; color: #ffffff; position: relative; overflow: hidden; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                         <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
@@ -44,7 +39,7 @@
                                     <div style="display: inline-block; background-color: #ffffff; color: #F04444; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; margin-bottom: 15px; letter-spacing: 0.5px;">
                                         <span style="display: inline-block; width: 6px; height: 6px; background-color: #F04444; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 0 0 1.5px #F04444; margin-right: 3px; vertical-align: middle;"></span> CRITICAL ALERT
                                     </div>
-                                    <h1 style="margin: 0; font-size: 36px; line-height: 1.2;">Usage Threshold<br>Exceeded</h1>
+                                    <h1 style="margin: 0; font-size: 36px; font-size: clamp(24px, 6vw, 36px); line-height: 1.2;">Usage Threshold<br>Exceeded</h1>
                                 </td>
                             </tr>
                         </table>
@@ -54,17 +49,14 @@
                     <p style="font-size: 16px; line-height: 1.4; margin-top: 0; margin-bottom: 20px; color: #011448;">
                         We are writing to inform you that your workspace has reached a key usage threshold <strong>Chatting</strong> tokens.
                     </p>
-                    
-                    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 10px; border-collapse: collapse;">
-                        <tr>
-                            <td align="left" style="font-size: 16px; color: #011448; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                                <strong>Status:</strong> <span style="color: #011448;">Critical Alert</span>
-                            </td>
-                            <td align="right" style="font-size: 16px; color: #011448; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                                <strong>License:</strong> <span style="color: #011448;">123456789</span>
-                            </td>
-                        </tr>
-                    </table>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 10px; font-size: 16px; color: #011448;">
+                        <div style="margin-bottom: 8px; margin-right: 15px;">
+                            <strong>Status:</strong> <span style="color: #011448;">Critical Alert</span>
+                        </div>
+                        <div style="margin-bottom: 8px;">
+                            <strong>License:</strong> <span style="color: #011448;">123456789</span>
+                        </div>
+                    </div>
                     
                     <!-- Stats Box -->
                     <div style="background: #F9FAFF; border: 1px solid rgba(11, 109, 255, 0.20); border-radius: 4px; padding: 20px; margin-bottom: 30px;">
@@ -80,34 +72,39 @@
                             792,142 <span style="font-weight: normal;">/ 470,000</span>
                         </div>
                         
-                        <!-- 3 Cards -->
-                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 15px; border-collapse: separate; border-spacing: 0;">
-                            <tr>
-                                <td width="31%" style="background: #FFFFFF; border: 1px solid rgba(11, 109, 255, 0.20); border-radius: 4px; padding: 15px; text-align: center; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                 
+                        <div style="font-size: 0; text-align: left; margin-right: -12px; margin-bottom: 15px;">
+                            <!-- Card 1 -->
+                            <div style="display: inline-block; vertical-align: top; width: 100%; width: calc((480px - 100%) * 999); min-width: 176px; max-width: 100%; box-sizing: border-box; padding-right: 12px; padding-bottom: 12px;">
+                                <div style="background: #FFFFFF; border: 1px solid rgba(11, 109, 255, 0.20); border-radius: 4px; padding: 15px; text-align: left;">
                                     <div style="font-size: 14px; color: #011448; margin-bottom: 10px;">
-                                        <img src="../images/allocated.svg" width="16" style="vertical-align: middle; border: 0; outline: none;"> Allocated Token
+                                        <img src="../images/allocated.svg" width="16" style="vertical-align: middle; margin-right: 5px; border: 0; outline: none;"> <span style="vertical-align: middle;">Allocated Token</span>
                                     </div>
-                                    <div style="font-size: 18px; font-weight: bold; color: #011448; text-align: left;">470,000</div>
-                                </td>
-                                <td width="3%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;"></td>
-                                <td width="32%" style="background: #FFFFFF; border: 1px solid rgba(11, 109, 255, 0.20); border-radius: 4px; padding: 15px; text-align: center; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                                    <div style="font-size: 14px; color: #011448; margin-bottom: 10px; text-align: left;">
-                                        <img src="../images/token.svg" width="16" style="vertical-align: middle; border: 0; outline: none;"> Used Token
-                                    </div>
-                                    <div style="font-size: 18px; font-weight: bold; color: #F04444; text-align: left;">792,142</div>
-                                </td>
-                                <td width="3%" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;"></td>
-                                <td width="31%" style="background: #FFFFFF; border: 1px solid rgba(11, 109, 255, 0.20); border-radius: 4px; padding: 15px; text-align: center; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                    <div style="font-size: 18px; font-weight: bold; color: #011448;">470,000</div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div style="display: inline-block; vertical-align: top; width: 100%; width: calc((480px - 100%) * 999); min-width: 176px; max-width: 100%; box-sizing: border-box; padding-right: 12px; padding-bottom: 12px;">
+                                <div style="background: #FFFFFF; border: 1px solid rgba(11, 109, 255, 0.20); border-radius: 4px; padding: 15px; text-align: left;">
                                     <div style="font-size: 14px; color: #011448; margin-bottom: 10px;">
-                                        <img src="../images/balance.svg" width="16" style="vertical-align: middle; border: 0; outline: none;"> Balance Token
+                                        <img src="../images/token.svg" width="16" style="vertical-align: middle; margin-right: 5px; border: 0; outline: none;"> <span style="vertical-align: middle;">Used Token</span>
                                     </div>
-                                    <div style="font-size: 18px; font-weight: bold; color: #011448; text-align: left;">-322,142</div>
-                                </td>
-                            </tr>
-                        </table>
+                                    <div style="font-size: 18px; font-weight: bold; color: #F04444;">792,142</div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div style="display: inline-block; vertical-align: top; width: 100%; width: calc((480px - 100%) * 999); min-width: 176px; max-width: 100%; box-sizing: border-box; padding-right: 12px; padding-bottom: 12px;">
+                                <div style="background: #FFFFFF; border: 1px solid rgba(11, 109, 255, 0.20); border-radius: 4px; padding: 15px; text-align: left;">
+                                    <div style="font-size: 14px; color: #011448; margin-bottom: 10px;">
+                                        <img src="../images/balance.svg" width="16" style="vertical-align: middle; margin-right: 5px; border: 0; outline: none;"> <span style="vertical-align: middle;">Balance Token</span>
+                                    </div>
+                                    <div style="font-size: 18px; font-weight: bold; color: #011448;">-322,142</div>
+                                </div>
+                            </div>
+                        </div>
                         
                         <!-- Alert Message -->
-                        <div style="background-color: #fff; border: 1px solid rgba(11, 109, 255, 0.20); border-radius: 4px; padding: 5px; font-size: 14px; color: #F04444; font-weight: bold;">
+                        <div style="background-color: #fff; border: 1px solid rgba(11, 109, 255, 0.20); border-radius: 4px; padding: 10px 15px; font-size: 14px; color: #F04444; font-weight: bold;">
                             <img src="../images/Attention.svg" width="16" style="vertical-align: text-bottom; margin-right: 5px; border: 0; outline: none;">
                             <span style="color: #011448; font-weight: normal;">Attention!:</span> Token usage exceeds your current balance.
                         </div>
@@ -152,7 +149,7 @@
             
             <!-- Bottom Bar -->
             <tr>
-                <td style="background-color: #0b6dff; padding: 10px 30px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                <td style="background-color: #0b6dff; padding: 10px 20px; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                     <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
                         <tr>
                             <td align="left" valign="middle" style="font-size: 12px; color: #ffffff; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
