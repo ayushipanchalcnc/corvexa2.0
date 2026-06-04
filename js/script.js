@@ -618,7 +618,9 @@
       event.preventDefault();
       const alignDelta = Math.max(0, state.sectionRect.top - state.stickyStart);
       window.scrollBy(0, alignDelta);
-      setPromiseProgress(targetProgress + (deltaY - alignDelta) * progressPerPixel);
+      setPromiseProgress(
+        targetProgress + (deltaY - alignDelta) * progressPerPixel,
+      );
       return;
     }
 
@@ -628,9 +630,14 @@
       state.sectionRect.bottom - deltaY >= state.stickyEnd
     ) {
       event.preventDefault();
-      const alignDelta = Math.min(0, state.sectionRect.bottom - state.stickyEnd);
+      const alignDelta = Math.min(
+        0,
+        state.sectionRect.bottom - state.stickyEnd,
+      );
       window.scrollBy(0, alignDelta);
-      setPromiseProgress(targetProgress + (deltaY - alignDelta) * progressPerPixel);
+      setPromiseProgress(
+        targetProgress + (deltaY - alignDelta) * progressPerPixel,
+      );
       return;
     }
 
@@ -670,20 +677,32 @@
 
   window.addEventListener("scroll", updatePromiseScales, { passive: true });
   window.addEventListener("resize", updatePromiseScales, { passive: true });
-  window.addEventListener("wheel", function (event) {
-    handlePromiseScrollDelta(event.deltaY, event);
-  }, { passive: false });
-  window.addEventListener("touchstart", function (event) {
-    if (!event.touches.length) return;
-    lastTouchY = event.touches[0].clientY;
-  }, { passive: true });
-  window.addEventListener("touchmove", function (event) {
-    if (!event.touches.length) return;
-    const touchY = event.touches[0].clientY;
-    const deltaY = lastTouchY - touchY;
-    handlePromiseScrollDelta(deltaY, event);
-    lastTouchY = touchY;
-  }, { passive: false });
+  window.addEventListener(
+    "wheel",
+    function (event) {
+      handlePromiseScrollDelta(event.deltaY, event);
+    },
+    { passive: false },
+  );
+  window.addEventListener(
+    "touchstart",
+    function (event) {
+      if (!event.touches.length) return;
+      lastTouchY = event.touches[0].clientY;
+    },
+    { passive: true },
+  );
+  window.addEventListener(
+    "touchmove",
+    function (event) {
+      if (!event.touches.length) return;
+      const touchY = event.touches[0].clientY;
+      const deltaY = lastTouchY - touchY;
+      handlePromiseScrollDelta(deltaY, event);
+      lastTouchY = touchY;
+    },
+    { passive: false },
+  );
 })();
 
 // Case Studies Tab Filter
@@ -744,21 +763,48 @@
 
 (function () {
   const cards = document.querySelectorAll(".how-it-works__card"),
-    stage = document.querySelector(".section--how-it-works__stage");
-  if (!cards.length || !stage) return;
+    stage = document.querySelector(".section--how-it-works__stage"),
+    grid = stage ? stage.querySelector(".section--how-it-works__grid") : null;
+  if (!cards.length || !stage || !grid) return;
 
   let targetProgress = 0,
     currentProgress = 0,
     isAnimating = false;
   const ease = 0.1;
 
+  function adjustStageHeight() {
+    if (window.innerWidth > 1024) {
+      const N = cards.length;
+      stage.style.height = `${Math.max(200, N * 75)}vh`;
+      
+      const stickyTop = 120;
+      const bottomBuffer = 50;
+      const gridHeight = grid.offsetHeight;
+      const overflowHeight = Math.max(0, gridHeight - (window.innerHeight - stickyTop - bottomBuffer));
+      stage.style.marginBottom = `-${overflowHeight}px`;
+    } else {
+      stage.style.height = "";
+      stage.style.marginBottom = "";
+    }
+  }
+
   function renderScales(p) {
+    const N = cards.length;
+    const step = N > 1 ? 1.0 / (N - 1) : 1.0;
+    const stickyTop = 120;
+    const bottomBuffer = 50; // Safety buffer to keep cards fully above the viewport bottom edge
+    const gridHeight = grid.offsetHeight;
+    const overflowHeight = Math.max(0, gridHeight - (window.innerHeight - stickyTop - bottomBuffer));
+    const t = Math.max(0, Math.min(1, (p - 0.1) / 0.9));
+    const translateY = -t * overflowHeight;
+    grid.style.transform = `translate3d(0, ${translateY}px, 0)`;
+
     cards.forEach((card, idx) => {
-      const act = idx * 0.3;
-      const iEnd = Math.max(0, act - 0.1),
-        aStart = Math.max(0, act - 0.02);
-      const fStart = idx === 3 ? 2 : act + 0.15,
-        fEnd = idx === 3 ? 2 : act + 0.25;
+      const act = idx * step;
+      const iEnd = Math.max(0, act - step / 3),
+        aStart = Math.max(0, act - step / 15);
+      const fStart = idx === N - 1 ? 2.0 : act + step * 0.5,
+        fEnd = idx === N - 1 ? 2.0 : act + step * 0.8333333333333333;
 
       const tIn =
         aStart === iEnd
@@ -803,12 +849,17 @@
             c.style.pointerEvents =
               ""),
       );
+      grid.style.transform = ""; // Reset grid transform on mobile
       return;
     }
     const rect = stage.getBoundingClientRect();
+    const gridHeight = grid.offsetHeight;
+    const stickyTop = 120; // grid is sticky at top: 120px in CSS
+    const scrollable = rect.height - gridHeight;
+
     targetProgress = Math.max(
       0,
-      Math.min(1, -rect.top / (rect.height - window.innerHeight || 1)),
+      Math.min(1, (stickyTop - rect.top) / (scrollable || 1)),
     );
     if (!isAnimating) {
       isAnimating = true;
@@ -816,10 +867,16 @@
     }
   }
 
+  adjustStageHeight();
   updateScales();
   window.addEventListener("scroll", updateScales, { passive: true });
-  window.addEventListener("resize", updateScales, { passive: true });
+  window.addEventListener("resize", () => {
+    adjustStageHeight();
+    updateScales();
+  }, { passive: true });
 })();
+
+// footer col js for responsive
 
 (function () {
   var footerCols = document.querySelectorAll("[data-footer-col]");
