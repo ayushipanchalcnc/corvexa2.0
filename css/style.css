@@ -1298,20 +1298,15 @@ section[id] {
   }
 }
 
-.section--hero__integrations-row img {
+.section--hero__integrations-row li {
   height: 30px;
-  width: auto;
   flex-shrink: 0;
 }
 
-.section--hero__integration-calendly {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-4);
-}
-
-.section--hero__integration-calendly img {
-  height: 27px;
+.section--hero__integrations-row li img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* === Section: Hero Responsive === */
@@ -2888,14 +2883,14 @@ section[id] {
 }
 
 /* Hover / focus */
-.section--sales-output__visual {
+.section--sales-output__visual img {
   transition:
     transform 400ms var(--ease-out),
     box-shadow 400ms var(--ease-out);
 }
 
 @media (hover: hover) {
-  .section--sales-output__visual:hover {
+  .section--sales-output__visual:hover img {
     transform: translateY(-6px);
     box-shadow: 0 -16px 56px rgba(11, 109, 255, 0.26);
   }
@@ -5399,7 +5394,7 @@ section[id] {
 }
 
 .section--pricing-plans__header {
-  max-width: 295px;
+  max-width: 301px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -5417,6 +5412,7 @@ section[id] {
   display: inline-flex;
   align-items: center;
   gap: var(--space-8);
+  flex-wrap: wrap;
 }
 
 .section--pricing-plans__toggle-monthly {
@@ -6505,6 +6501,10 @@ section[id] {
   line-height: var(--lh-h4);
   font-weight: var(--fw-h4);
   color: var(--color-dark-blue);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .section--blog__card-title a {
@@ -9157,7 +9157,6 @@ section[id] {
 
 /* --- Section: Setup & other content --- */
 
-
 .docs-section {
   width: 100%;
   max-width: 1398px;
@@ -9666,7 +9665,6 @@ section[id] {
     line-height: var(--lh-p4);
   }
 }
- 
 
 /* case-study page */
 

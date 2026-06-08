@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Corvexa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="icon" href="./images/favicon.ico">
+</head>
+
+<body>
+    <div id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header section--hero__nav">
+        <a class="section--hero__logo" href="./index.html" aria-label="Corvexa home">
+            <img src="./images/logo-corvexa.svg" alt="Corvexa" width="185" height="35">
+        </a>
+        <nav class="section--hero__nav-menu" aria-label="Primary">
+            <ul class="section--hero__nav-list">
+                <li data-text="How it works"><a href="./index.html#how-it-works">How it works</a></li>
+                <li data-text="Integrations"><a href="./integrations.html">Integrations</a></li>
+                <li data-text="Pricing"><a href="./pricing.html">Pricing</a></li>
+                <li data-text="Case Studies"><a href="./casestudy.html">Case Studies</a></li>
+                <li class="nav-dropdown-container" data-text="Resource">
+                    <button class="section--hero__nav-dropdown" type="button" aria-haspopup="menu" aria-expanded="false">
+                        Resource
+                        <svg class="section--hero__nav-chevron" viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                            <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="./about.html">About Us</a>
+                        <a href="./blog.html">Blog</a>
+                        <a href="./documentation.html">Documentation</a>
+                        <a href="./contact.html">Contact</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="section--hero__actions">
+            <a class="btn btn--primary" href="https://corvexa.ai/get-a-demo/">Book a demo</a>
+            <a class="btn btn--secondary" href="#login">
+                Log in
+                <svg class="btn__icon" viewBox="0 0 14 14" aria-hidden="true">
+                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+        <button type="button" class="hamburger" data-mobile-nav-trigger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
+    </header>
+
+    <div class="mobile-nav-backdrop" data-mobile-nav-backdrop hidden></div>
+    <aside class="mobile-nav" data-mobile-nav id="mobile-nav" aria-hidden="true" aria-labelledby="mobile-nav-title">
+        <div class="mobile-nav__header">
+            <span id="mobile-nav-title" class="mobile-nav__title">Menu</span>
+            <button type="button" class="mobile-nav__close" data-mobile-nav-close aria-label="Close menu">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <nav aria-label="Mobile">
+            <ul class="mobile-nav__list">
+                <li data-text="How it works"><a href="./index.html#how-it-works">How it works</a></li>
+                <li data-text="Integrations"><a href="./integrations.html">Integrations</a></li>
+                <li data-text="Pricing"><a href="./pricing.html">Pricing</a></li>
+                <li data-text="Case Studies"><a href="./casestudy.html">Case Studies</a></li>
+                <li data-text="Resource">
+                    <details>
+                        <summary>
+                            Resource
+                            <svg viewBox="0 0 12 7" width="12" height="7" aria-hidden="true">
+                                <path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </summary>
+                        <ul class="mobile-nav__dropdown-menu">
+                            <li data-text="About Us"><a href="./about.html">About Us</a></li>
+                            <li data-text="Blog"><a href="./blog.html">Blog</a></li>
+                            <li data-text="Documentation"><a href="./documentation.html">Documentation</a></li>
+                            <li data-text="Contact"><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile-nav__actions">
+            <a class="btn btn--primary mobile-nav__cta" href="https://corvexa.ai/get-a-demo/">Book a demo</a>
+            <a class="btn btn--secondary mobile-nav__cta" href="#login">
+                Log in
+                <svg class="btn__icon" viewBox="0 0 14 14" aria-hidden="true">
+                    <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </aside>
+
+    <main class="info-page">
+        <div class="info-container">
+            <h1>Privacy Policy</h1>
+            <div>
+                <div class="info-dates">
+                    <span><strong>Effective Date:</strong> 18 Oct 2025</span>
+                    <span><strong>Last Updated:</strong> 12 Feb 2026</span>
+                </div>
+                <div>
+                    <p>Welcome to&nbsp;<strong>Corvexa</strong>&nbsp;(hereinafter referred to as “the Company,” “we,” “our,” or “us”). We respect your privacy and are committed to protecting your personal data. This Privacy Policy outlines our practices regarding the collection, use, processing, and disclosure of your information when you use our website, SaaS platform, AI Chatbot Widget, and related services (collectively, the “Services”).</p>
+                    <p>This policy has been specifically designed to comply with applicable data protection laws (including the GDPR, Indian IT Act 2000, and DPDP Act 2023) and meets the stringent compliance and verification requirements of&nbsp;Razorpay&nbsp;and other payment gateways.</p>
+                </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div>
+                <div>
+                    <h2>1. Information We Collect</h2>
+                </div>
+                <div>
+                    <p>As described below, we collect personal data from visitors, users, and customers of our Services. We only collect the information necessary to provide and improve our Services.</p>
+                    
+                    <h3>A. Information You Provide to Us</h3>
+                    <ul>
+                        <li><strong>Account Registration Data:</strong> Name, email address, password, and phone number when you create an account.</li>
+                        <li><strong>Request &amp; Contact Data:</strong> When you request a demo, sign up for a trial, or contact support, we collect the content of your message, your name, and your contact details.</li>
+                        <li><strong>Lead Capture Data:</strong> During chatbot interactions on our customers' websites, we collect lead information such as names, work emails, phone numbers, and responses.</li>
+                    </ul>
+
+                    <h3>B. Automatically Collected Information</h3>
+                    <ul>
+                        <li><strong>Device &amp; Connection Information:</strong> IP address, device type, operating system, browser type, referral URLs, and connection status.</li>
+                        <li><strong>Usage Data:</strong> Pages visited, features used, time spent on the Services, and custom actions within the app dashboard.</li>
+                        <li><strong>Cookies &amp; Local Storage:</strong> We use cookies to persist session tokens, user preferences, and performance metrics.</li>
+                    </ul>
+
+                    <h3>C. Payment Information (Razorpay Compliance)</h3>
+                    <ul>
+                        <li>We do not store credit card or bank account details. All transactions are securely processed through Razorpay, a PCI-DSS compliant payment gateway.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div>
+                <div>
+                    <h2>2. How We Use Your Information</h2>
+                </div>
+                <div>
+                    <p>We process your personal data for the following business and commercial purposes:</p>
+                    <ul>
+                        <li><strong>Service Delivery:</strong> To setup, operate, maintain, and support your Corvexa instance.</li>
+                        <li><strong>AI Processing &amp; Chatbot Functionality:</strong> To qualify website visitors, handle comparisons, and route high-intent buyers in real time.</li>
+                        <li><strong>Customer Support:</strong> To troubleshoot issues, respond to support tickets, and contact you with updates.</li>
+                        <li><strong>Lead Capture &amp; Handoff:</strong> To qualify leads, push lead profiles to your CRM, and trigger notifications to your sales reps.</li>
+                        <li><strong>Analytics &amp; Optimization:</strong> To monitor system performance, track conversion rates, and train AI models for better conversation routing.</li>
+                        <li><strong>Security &amp; Abuse Prevention:</strong> To monitor for fraudulent activity, unauthorized access, and policy violations.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div>
+                <div>
+                    <h2>3. Data Sharing &amp; Third-Party Processors</h2>
+                </div>
+                <div>
+                    <p>We do not sell, rent, or trade your personal data. We only share information with trusted third-party services that help us run our platform:</p>
+                    <ul>
+                        <li><strong>CRM &amp; Messaging Platforms:</strong> We push captured lead details to CRM platforms (HubSpot, Salesforce) and communication services (Gmail, Slack) according to your preferences.</li>
+                        <li><strong>Payment Processors:</strong> We share transaction information with Razorpay to process recurring subscriptions and billing.</li>
+                        <li><strong>Hosting &amp; Infrastructure:</strong> Our servers are hosted on secure, industry-leading cloud providers.</li>
+                        <li><strong>Legal Compliance:</strong> We may disclose data if required by law, subpoena, or to protect the safety and rights of the Company and its users.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div>
+                <div>
+                    <h2>4. Data Security</h2>
+                </div>
+                <div>
+                    <p>We implement state-of-the-art security measures to protect all data collected by our Services:</p>
+                    <ul>
+                        <li><strong>Hosting &amp; Infrastructure Security:</strong> All databases and hosting environments conform to SOC2 Type II, PCI DSS, and HIPAA security guidelines.</li>
+                        <li><strong>Encryption:</strong> Data is encrypted in transit using SSL/TLS protocols and at rest using AES-256 standard encryption keys.</li>
+                        <li><strong>Access Controls:</strong> Administrative access is restricted to essential engineers with strict identity verification.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 5 -->
+            <div>
+                <div>
+                    <h2>5. Data Retention</h2>
+                </div>
+                <div>
+                    <p>We keep personal data only for as long as necessary to provide the Services:</p>
+                    <ul>
+                        <li><strong>Active Customer Data:</strong> Kept for the duration of the subscription to fulfill account functions.</li>
+                        <li><strong>Temporary Visitor Logs:</strong> Chat history and conversation logs are deleted after 90 days if the visitor does not convert.</li>
+                        <li><strong>Payment Log Records:</strong> Payment logs and billing details are retained as required by financial and tax regulations.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div>
+                <div>
+                    <h2>6. Your Privacy Rights</h2>
+                </div>
+                <div>
+                    <p>Depending on your jurisdiction (e.g. CCPA/GDPR), you possess certain rights regarding your personal information:</p>
+                    <ul>
+                        <li><strong>Right to Access:</strong> You can request a copy of the personal data we hold about you.</li>
+                        <li><strong>Right to Rectification:</strong> You can request that we update or correct inaccurate details.</li>
+                        <li><strong>Right to Erasure (Right to be Forgotten):</strong> You can request complete deletion of your personal data from our databases.</li>
+                        <li><strong>Right to Portability:</strong> You can request that we export your data in a structured, machine-readable format.</li>
+                    </ul>
+                    <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@corvexa.ai">privacy@corvexa.ai</a>.</p>
+                </div>
+            </div>
+
+            <!-- Section 7 -->
+            <div>
+                <div>
+                    <h2>7. Cookies &amp; Tracking Technologies</h2>
+                </div>
+                <div>
+                    <p>We use cookies and browser storage to personalize and optimize your experience:</p>
+                    <ul>
+                        <li><strong>Local Storage:</strong> Used to maintain chat sessions, visitor ID consistency, and UI settings.</li>
+                        <li><strong>Activity Tracking Cookies:</strong> Used to analyze traffic sources, session duration, and feature engagement.</li>
+                    </ul>
+                    <p>You can adjust or disable cookie tracking within your browser's security panel at any time.</p>
+                </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div>
+                <div>
+                    <h2>8. Changes to This Privacy Policy</h2>
+                </div>
+                <div>
+                    <p>We reserve the right to modify this policy at any time. If we make material updates, we will update the dates at the top of this document and notify registered customers via dashboard alerts.</p>
+                </div>
+            </div>
+
+            <!-- Section 9 -->
+            <div>
+                <div>
+                    <h2>9. Contact Information (Required for Razorpay Verification)</h2>
+                </div>
+                <div>
+                    <p>If you have any questions or complaints regarding this Privacy Policy, please contact us:</p>
+                    <address>
+                        <strong>Company Name:</strong> Corvexa<br>
+                        <strong>Email Address:</strong> <a href="mailto:privacy@corvexa.ai">privacy@corvexa.ai</a>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer section--footer">
+        <div class="section--footer__main">
+            <div class="section--footer__cta reveal">
+                <div class="section--footer__cta-text">
+                    <h2 class="section--footer__title">Ready to turn visitor intent into qualified leads?</h2>
+                    <p class="section--footer__subtitle">Join the forward-thinking sales teams already using Corvexa to win more deals.</p>
+                </div>
+                <div class="section--footer__buttons">
+                    <a class="btn btn--accent" href="#trial">Start free trial</a>
+                    <a class="btn btn--ghost-light" href="#book-demo">
+                        Book a demo
+                        <svg class="btn__icon" viewBox="0 0 14 14" aria-hidden="true">
+                            <path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="section--footer__rule">
+
+            <div class="section--footer__links reveal">
+                <div class="section--footer__brand">
+                    <a class="section--footer__logo" href="./index.html" aria-label="Corvexa home">
+                        <img src="./images/logo-corvexa.svg" alt="Corvexa" width="185" height="35">
+                    </a>
+                    <p class="section--footer__tagline">Corvexa helps B2B websites turn visitor<br>intent into qualified leads.</p>
+                </div>
+                <details class="section--footer__col" data-footer-col>
+                    <summary class="section--footer__col-title">
+                        Product
+                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </summary>
+                    <ul class="section--footer__col-list">
+                        <li><a href="./index.html#how-it-works">How it works</a></li>
+                        <li><a href="./integrations.html">Integrations</a></li>
+                        <li><a href="./pricing.html">Pricing</a></li>
+                        <li><a href="./casestudy.html">Case Studies</a></li>
+                    </ul>
+                </details>
+
+                <details class="section--footer__col" data-footer-col>
+                    <summary class="section--footer__col-title">
+                        Company
+                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </summary>
+                    <ul class="section--footer__col-list">
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </details>
+
+                <details class="section--footer__col" data-footer-col>
+                    <summary class="section--footer__col-title">
+                        Resources
+                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </summary>
+                    <ul class="section--footer__col-list">
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./documentation.html">Documentation</a></li>
+                    </ul>
+                </details>
+                <details class="section--footer__col" data-footer-col>
+                    <summary class="section--footer__col-title">
+                        Legal
+                        <svg class="section--footer__col-chevron" viewBox="0 0 12 12" aria-hidden="true">
+                            <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </summary>
+                    <ul class="section--footer__col-list">
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </details>
+            </div>
+        </div>
+
+        <div class="section--footer__bar">
+            <p class="section--footer__copy">Copyright &copy; 2026 All Rights Reserved.</p>
+            <ul class="section--footer__social">
+                <li>
+                    <a href="#linkedin" aria-label="Corvexa on LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                            <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.5 18H6V10h2.5v8zm-1.25-9.2a1.45 1.45 0 1 1 0-2.9 1.45 0 0 1 0 2.9zM18 18h-2.5v-4.4c0-1.05-.02-2.4-1.46-2.4-1.46 0-1.68 1.14-1.68 2.32V18H10V10h2.4v1.1h.03c.34-.64 1.15-1.32 2.37-1.32 2.54 0 3 1.67 3 3.85V18z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#instagram" aria-label="Corvexa on Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="3" y="3" width="18" height="18" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#youtube" aria-label="Corvexa on YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.5C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.5v-7l6 3.5z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#twitter" aria-label="Corvexa on X">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                            <path d="M18.244 2H21l-6.51 7.44L22 22h-6.78l-4.62-6.13L4.95 22H2.19l6.96-7.95L1.5 2h6.94l4.18 5.6L18.24 2z"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
