@@ -81,7 +81,7 @@ body.page .woocommerce section.woocommerce-order-details header h2{margin-bottom
     .woocommerce table.shop_table_responsive tbody tr{display:block;border:1px solid var(--light-text);border-radius:8px;overflow:hidden;background:#fff;}
     .woocommerce table.shop_table_responsive tbody tr td,.woocommerce table.shop_table_responsive tbody tr th{display:flex;justify-content:space-between;align-items:center;padding:10px 15px;border-bottom:1px solid var(--light-text);text-align:right;border-right: 0;}
     .woocommerce table.shop_table_responsive tbody tr td:last-child{border-bottom:0 !important;}
-    .woocommerce table.shop_table_responsive tbody tr td::before{font-weight:600;text-align:left;color:var(--secondary);}
+    .woocommerce table.shop_table_responsive tbody tr td::before{font-weight:600;text-align:left;color:var(--color-dark-blue);}
     .woocommerce table.shop_table_responsive thead{display:none;}
     .woocommerce table.shop_table tbody th, .woocommerce table.shop_table tfoot td, .woocommerce table.shop_table tfoot th{border-left: 0;border-top: 0;}
     .woocommerce table.shop_table_responsive tbody tr:first-child td:first-child, .woocommerce-page table.shop_table_responsive tbody tr:first-child td:first-child{border-left: 0;}
@@ -237,3 +237,40 @@ form#cnc-buy-tokens{background:var(--color-light-blue);padding:15px;border-radiu
     #betterdocs-single-content table thead th,#betterdocs-single-content table tbody td{padding:10px;min-width:150px;}
 }
 /* documentation css End */
+
+/* Support Ticket Start */
+.support-ticket{display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.support-ticket p:not(:last-child){margin-bottom:15px;}
+.support-ticket .entry-title{display:block;display:block;margin-bottom:20px;font-size:var(--fs-h1);font-weight:var(--fw-h1);line-height:var(--lh-h1);color:var(--color-dark-blue);text-align:center;}
+.support-ticket .header{font-size: 48px;}
+.support-ticket .entry-content{background:#ffffff;padding:30px;box-shadow:0 0 10px 0 rgba(0,0,0,0.08);border-radius:20px;max-width: 600px; width: 100%;margin: 0 auto;font-size: 16px;}
+.support-ticket .entry-content.fst-ticket-panel{max-width:100%;width: 100%;}
+.support-ticket .fs_ticket_thread_content .fs_ticket_avatar,
+.support-ticket .fs_ticket_thread_content .fs_ticket_thread_wrap,
+.support-ticket .fs_ticket_thread_content .fs_thread_message{padding: 0;}
+.support-ticket .fst_login_form_auth_wrapper{width:100%;margin-top:15px;}
+.support-ticket .fst_login_wrapper{max-width:100%;}
+.support-ticket .fst_login_wrapper form#loginform>p{opacity: 1;}
+.support-ticket .fst_login_wrapper form#loginform .input,.support-ticket form input:not([type="checkbox"]),
+.support-ticket form select,
+.support-ticket form textarea{font-family:var(--font-family) !important;border:1px solid rgba(9,25,65,0.2) !important;color:var(--color-dark-blue) !important;background:#f9fbff !important;padding:15px 20px !important;border-radius:10px !important;width:100% !important;}
+.support-ticket::placeholder{color:rgba(9,25,65,0.5) !important;opacity:1 !important;}
+.support-ticket form label{font-size: 16px !important;}
+.support-ticket #fstRegistrationForm label{text-transform: capitalize;}
+.support-ticket form .success.text-success{color: green !important;}
+.support-ticket button#fs_verification_submit{margin: 15px 0 !important;}
+.support-ticket .entry-footer{margin-top: 15px;}
+.support-ticket .fs_client_portal .fs_ticket_wrapper .fs_tickets_container .fs_tickets_header{flex-wrap: wrap;gap: 5px;}
+.support-ticket .fs_client_portal .fs_ticket_wrapper .fs_tickets_container .fs_tickets_header .fs_tickets_actions{flex-wrap: wrap;}
+.fst_reset_pass_wrapper, .fst_registration_wrapper{max-width: 100% !important;}
+.fstRegistrationForm button,.fs_reset_pass_form button, .fst_registration_wrapper button, .fst_registration_wrapper .fs_registration_form #fst_submit, button#fs_verification_submit, .support-ticket .fst_login_wrapper input#wp-submit{font-size:var(--fs-button) !important;font-family:var(--font-family) !important;line-height:var(--lh-button) !important;display:inline-flex;align-items:center;justify-content:center;gap:var(--space-8);background-color:var(--color-dark-blue) !important;color:var(--color-white) !important;font-weight:var(--fw-button);cursor:pointer;text-align:center !important;transition:background-color 250ms var(--ease-out), color 250ms var(--ease-out), box-shadow 250ms var(--ease-out), transform 250ms var(--ease-out) !important;padding:var(--space-12) var(--space-16) !important;border:1px solid transparent !important;border-radius:var(--radius-pill) !important;width:100% !important;}
+.fstRegistrationForm button:hover,.fs_reset_pass_form button:hover, .fst_registration_wrapper button:hover, .fst_registration_wrapper .fs_registration_form #fst_submit:hover, button#fs_verification_submit:hover, .support-ticket .fst_login_wrapper input#wp-submit:hover{background-color:var(--color-dark-blue-hover) !important;color:var(--color-white) !important;transform:translateY(-2px) !important;box-shadow: 0px 5px 8px 0px rgba(1, 20, 72, 0.18) !important;}
+.fstRegistrationForm button:active,.fs_reset_pass_form button:active, .fst_registration_wrapper button:active, .fst_registration_wrapper .fs_registration_form #fst_submit:active, button#fs_verification_submit:active, .support-ticket .fst_login_wrapper input#wp-submit:active{transform:translateY(0) !important;}
+.error.text-danger{font-weight:600 !important;}
+
+@media (max-width: 767px) {
+    .support-ticket .entry-content{max-width: 100%;}
+    .support-ticket .entry-content.fst-ticket-panel{max-width: 100%;}    
+}
+
+/* Support Ticket End */
